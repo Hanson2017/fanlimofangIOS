@@ -116,10 +116,10 @@ export default class UserSet extends Component {
                 let moveHeight = 30 + (e.startCoordinates.height - leftHeight);
                 console.log("this.moveH=" + this.moveH, "this.contentHeight=" + this.contentHeight, "height=" + height);
                 //moveH 异常数据处理  
-                if (this.moveH + conHeight > this.contentHeight) {
+                if (this.moveH + conHeight > this.contentHeight && conHeight<this.contentHeight) {
                     this.moveH = this.contentHeight - conHeight;
                     console.log("===error===");
-                }
+                }             
                 this.lastMoveH = this.moveH;
                 this.refs.scroll.scrollTo({ y: this.moveH + moveHeight, x: 0 });
             }

@@ -221,9 +221,9 @@ export default class CommentForm extends Component {
                     <View style={styles.FormListLabel}><Text style={{ color: '#34a0e7' }}>一键填充：</Text></View>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start' }}>
                         {
-                            userSetInfos.listdata.map((list,i) => {
+                            userSetInfos.listdata.map((list,j) => {
                                 return (
-                                    <TouchableOpacity key={i} style={{ width: 130, marginBottom: 10, }}
+                                    <TouchableOpacity key={j} style={{ width: 130, marginBottom: 10, }}
                                         onPress={() => {
                                             that.state.listData[i].phone = list.c_phone;
                                             that.setState({
