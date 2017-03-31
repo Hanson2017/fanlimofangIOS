@@ -1,4 +1,19 @@
+__tests__
+.vscode
+android
+ios
 node_modules
+.babelrc
+.buckconfig
+.flowconfig
+.gitattributes
+.watchmanconfig
+app.json
+index.android.js
+index.ios.js
+jsconfig.json
+package.json
+yarn.lock
 
 # OSX
 #
