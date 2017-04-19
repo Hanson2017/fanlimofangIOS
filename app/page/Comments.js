@@ -43,7 +43,7 @@ export default class CommentsPage extends Component {
                             renderRow={this.renderRow.bind(this)}
                             renderFooter={this.renderFooter.bind(this)}
                             onEndReached={this._onEndReached.bind(this)}
-                            onEndReachedThreshold={0}
+                            onEndReachedThreshold={10}
                             refreshControl={
                                 <RefreshControl
                                     refreshing={this.state.isRefreshing}

@@ -21,21 +21,40 @@ export default class Item extends Component {
         let joinText;
         let isRisk;
 
-        let risklevel =  Common.risklevel(data.plat.risklevel)  //风险等级
-        let investType =Common.investType(data.activity.isrepeat)  //投资类型
+        let risklevel = Common.risklevel(data.plat.risklevel)  //风险等级
+        let investType = Common.investType(data.activity.isrepeat)  //投资类型
 
         // 是否结束
         switch (data.activity.status) {
             case 1:
                 joinText = '我要参加'
                 btnJoinOver = null
-                isRisk =
-                    (
-                        <View style={[Theme.flexDrow, { marginTop: 10 }]}>
-                            <Tags tagsName={risklevel} styles={styles} />
-                            <Tags tagsName={'风控得分:' + data.plat.riskscore}  styles={styles}  />
-                        </View>
-                    )
+                if (data.activity.atype == 1) {
+                    isRisk =
+                        (
+                            <View style={[Theme.flexDrow, { marginTop: 10 }]}>
+                                <Tags tagsName={'风控分:' + data.plat.riskscore} styles={styles} />
+                                <Tags tagsName={risklevel} styles={styles} />
+
+                            </View>
+                        )
+                }
+                else if (data.activity.atype == 2) {
+                    isRisk =
+                        (
+                            <View style={[Theme.flexDrow, { marginTop: 10 }]}>
+                                <Tags tagsName={'黄金类产品'} styles={styles} />
+                            </View>
+                        )
+                }
+                else if (data.activity.atype == 3) {
+                    isRisk =
+                        (
+                            <View style={[Theme.flexDrow, { marginTop: 10 }]}>
+                                <Tags tagsName={'基金类产品'} styles={styles} />
+                            </View>
+                        )
+                }
                 break;
 
             case 2:
@@ -49,14 +68,14 @@ export default class Item extends Component {
         let ishighest = Common.isTag(data.activity.ishighest, '全网最高', styles);
         let isprotect = Common.isTag(data.activity.isprotect, '魔方保障', styles);
 
-        let repayText=data.repayday=='当日返现'?data.repayday:data.repayday+'返现'
+        let repayText = data.repayday == '当日返现' ? data.repayday : data.repayday + '返现'
         let repaydays = Common.isTag(data.repayday, repayText, styles);
 
         //关键字
         let keywords = Util.formatSymbol(data.activity.keywords);
-        keywords = keywords.map((keyword,i) => {
+        keywords = keywords.map((keyword, i) => {
             return (
-                <View style={{ marginTop: 5 }} key={i}><Text style={{ color: '#999' }}>{keyword}</Text></View>
+                <View style={{ marginTop: 5 }} key={i}><Text style={{ color: '#bdbaba', fontSize: 11 }}>{keyword}</Text></View>
             )
         })
 
@@ -88,16 +107,22 @@ export default class Item extends Component {
 
                     <View style={[Theme.flexDrow, Theme.mt15]}>
                         <View style={{ width: 120 }}>
-                            <View><Text style={Theme.c666}>投{data.activity.invest}获得</Text></View>
-                            <View style={Theme.mt5}><Text style={[Theme.red, styles.font17]}>{data.activity.rebate}</Text></View>
+                            <View><Text style={Theme.c666}>投{data.activity.invest + ''}获得</Text></View>
+                            <View style={Theme.mt5}><Text style={[Theme.red, styles.font17]}>{data.activity.rebate + ''}</Text></View>
                         </View>
                         <View style={{ width: 110 }}>
                             <View><Text style={Theme.c666}>相当于年化</Text></View>
-                            <View style={Theme.mt5}><Text style={[Theme.red, styles.font17]}>{data.activity.rate}%</Text></View>
+                            <View style={Theme.mt5}>
+                                <Text style={[Theme.red, styles.font17]}>
+                                    {data.activity.atype != 1 ? '浮动' :
+                                        data.activity.rate + '%'
+                                    }
+                                </Text>
+                            </View>
                         </View>
                         <View>
                             <View><Text style={Theme.c666}>已参加</Text></View>
-                            <View style={Theme.mt5}><Text style={[styles.font17, { color: '#999' }]}>{data.commentnum}人</Text></View>
+                            <View style={Theme.mt5}><Text style={[styles.font17, { color: '#999' }]}>{data.commentnum + ''}人</Text></View>
                         </View>
                     </View>
                     <View style={[styles.btnJoin, btnJoinOver, Theme.mt10]}>
@@ -134,6 +159,7 @@ const styles = StyleSheet.create({
     type: {
         borderWidth: 1,
         borderColor: '#ccc',
+        borderRadius: 3,
         height: 20,
         width: 30,
         alignItems: 'center',
@@ -144,13 +170,14 @@ const styles = StyleSheet.create({
         fontSize: 12,
     },
     tags: {
-        marginRight:8,
+        marginRight: 5,
         paddingLeft: 4,
         paddingRight: 4,
         borderWidth: 1,
+        borderRadius: 4,
         borderColor: Theme.color,
         height: 25,
-        minWidth: 55,
+        minWidth: 68,
         alignItems: 'center',
         justifyContent: 'center',
     },

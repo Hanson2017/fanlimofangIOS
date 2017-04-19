@@ -4,7 +4,7 @@ import { Text, StyleSheet,TextInput } from 'react-native';
 export default class InputList extends Component {
     render() {
         return (
-            <TextInput  style={styles.textInput} {...this.props.params} clearButtonMode={'while-editing'} />
+            <TextInput  style={styles.textInput} {...this.props.params} underlineColorAndroid="transparent" clearButtonMode={'while-editing'} />
         )
     }
 }

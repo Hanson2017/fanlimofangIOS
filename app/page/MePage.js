@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, Image, View, ScrollView, TouchableOpacity, TextInput, DeviceEventEmitter } from 'react-native';
+import { Text, StyleSheet, Image, View, ScrollView, TouchableOpacity, TextInput, DeviceEventEmitter ,Platform} from 'react-native';
 import Icon from 'react-native-vector-icons/Icomoon';
 import Theme from '../util/theme';
 import StorageLoginInfo from '../config/storageLogin'
@@ -8,7 +8,7 @@ import Login from '../page/LoginPage'
 import ActiveRecord from '../page/ActiveRecord'
 import ChangePassword from '../page/ChangePassword'
 import UserSet from '../page/UserSet'
-
+import MainPage from '../page/MainPage'
 
 class List extends Component {
     render() {
@@ -55,7 +55,7 @@ export default class MePage extends Component {
         if (signState === null) {
             accountHeader =
                 (
-                    <View style={styles.accountHeader}>
+                    <View style={[styles.accountHeader,Platform.OS=='android'?{marginTop:0}:null]}>
                         <TouchableOpacity onPress={this.goLogin.bind(this)}>
                             <Text style={styles.accountHeaderTouch}>登录</Text>
                         </TouchableOpacity>
@@ -68,7 +68,7 @@ export default class MePage extends Component {
         else {
             accountHeader =
                 (
-                    <View style={styles.accountHeader}>
+                    <View style={[styles.accountHeader,Platform.OS=='android'?{marginTop:0}:null]}>
                         <Text style={styles.accountHeaderText}>欢迎您，{signState.r_username}</Text>
                     </View>
                 )
@@ -100,7 +100,7 @@ export default class MePage extends Component {
                         navigator={this.props.navigator}
                         component={UserSet}
                     />
-                    <List text={'系统设置'} iconName={'set'} iconSize={18} iconColor={'#999'} />
+                    {/*<List text={'系统设置'} iconName={'set'} iconSize={18} iconColor={'#999'} />*/}
                 </View>
                 {logoutView}
             </View>
@@ -126,6 +126,9 @@ export default class MePage extends Component {
         signState = null;
         this.setState({
             ref: !this.state.ref
+        })
+        this.props.navigator.replace({
+            component: MainPage
         })
     }
 

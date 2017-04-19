@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, Image, View, ScrollView, RefreshControl, DeviceEventEmitter } from 'react-native';
+import { Text, StyleSheet, Image, View, ScrollView, RefreshControl, DeviceEventEmitter ,Platform} from 'react-native';
 import Item from '../component/Item';
 import Api from '../util/api';
 import Theme from '../util/theme';
@@ -24,7 +24,7 @@ export default class HomePage extends Component {
         }
         else {
             return (
-                <View style={styles.container}>
+                <View style={[styles.container,Platform.OS=='android'?{marginTop:0}:null]}>
                     <ScrollView
                         refreshControl={
                             <RefreshControl

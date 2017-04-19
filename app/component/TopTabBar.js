@@ -6,7 +6,8 @@ import {
     StyleSheet,
     View,
     TouchableOpacity,
-    Text
+    Text,
+    Platform
 } from 'react-native';
 
 class   TopTabBar extends Component {
@@ -39,7 +40,7 @@ class   TopTabBar extends Component {
 
     render() {
         return (
-            <View style={styles.tabsContainer}>
+            <View style={[styles.tabsContainer,Platform.OS=='android'?{marginTop:0}:null]}>
                 <View style={styles.tabs}>
                     {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
                 </View>
@@ -50,7 +51,7 @@ class   TopTabBar extends Component {
 
 const styles = StyleSheet.create({
     tabsContainer: {
-        marginTop:25,
+        marginTop:23,
         height: 50,
         backgroundColor: '#fff',
         flexDirection: 'row',

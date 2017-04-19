@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, Image, View, TextInput, TouchableOpacity, DeviceEventEmitter, Modal, Alert, Keyboard, Dimensions, Platform } from 'react-native';
+import { Text, StyleSheet, Image, View, TextInput, TouchableOpacity, DeviceEventEmitter, Modal, Alert, Keyboard, Dimensions, Platform, DatePickerAndroid } from 'react-native';
 
 import Api from '../util/api';
+import Util from '../util/util';
 import CameraAction from '../component/CameraAction';
 import Select from '../component/Select';
 import Calendar from '../component/Calendar';
@@ -45,7 +46,7 @@ export default class CommentForm extends Component {
         this.needMove = false;//弹出键盘时，textInputView是否需要滑动
     }
     CommentFormList(labelText, params, ViewInput) {
-        let index=Math.random()*10000
+        let index = Math.random() * 10000
         return (
             <View style={styles.FormList} key={index}>
                 <View style={styles.FormListLabel}><Text style={styles.FormListLabelText}>{labelText}</Text></View>
@@ -55,7 +56,7 @@ export default class CommentForm extends Component {
                             <Text style={{ color: '#666' }}>{ViewInput.value}</Text>
                         </TouchableOpacity>
                         :
-                        <TextInput style={styles.textInput} {...params} onFocus={() => this.textInputView = params.ref} />
+                        <TextInput style={styles.textInput} {...params} underlineColorAndroid="transparent" onFocus={() => this.textInputView = params.ref} />
                     }
                 </View>
             </View>
@@ -120,13 +121,24 @@ export default class CommentForm extends Component {
         let investdateView = null;
 
         if (comment_field.indexOf('investdate') >= 0) {
-            investdateView = this.CommentFormList('投资日期', {},
-                {
-                    value: that.state.listData[i].investdate,
-                    onPress: this._selectData.bind(this, i)
-                }
+            if (Platform.OS === 'ios') {
+                investdateView = this.CommentFormList('投资日期', {},
+                    {
+                        value: that.state.listData[i].investdate,
+                        onPress: this._selectData.bind(this, i)
+                    }
 
-            )
+                )
+            }
+            else {
+                investdateView = this.CommentFormList('投资日期', {},
+                    {
+                        value: that.state.listData[i].investdate,
+                        onPress: this.showPicker.bind(this, i)
+                    }
+
+                )
+            }
         }
         return investdateView;
     }
@@ -221,7 +233,7 @@ export default class CommentForm extends Component {
                     <View style={styles.FormListLabel}><Text style={{ color: '#34a0e7' }}>一键填充：</Text></View>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start' }}>
                         {
-                            userSetInfos.listdata.map((list,j) => {
+                            userSetInfos.listdata.map((list, j) => {
                                 return (
                                     <TouchableOpacity key={j} style={{ width: 130, marginBottom: 10, }}
                                         onPress={() => {
@@ -278,13 +290,13 @@ export default class CommentForm extends Component {
                 {
                     signState == null ?
                         <View style={styles.commentTop}>
-                            <Text style={styles.commentTopText}>无需注册也可参加活动，但注册后可更方便对信息进行编辑等操作，以及享受一键跟帖功能</Text>
-                            <View style={{flexDirection:'row'}}>
+                           
+                            <View style={{ flexDirection: 'row' }}>
                                 <TouchableOpacity activeOpacity={0.6} style={styles.qqBtn} onPress={ThirdLogin._qqlogin.bind(this, this)}>
                                     <Text style={styles.qqBtnText}>QQ登录</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity activeOpacity={0.6} style={[styles.qqBtn,styles.weChatBtn,{marginLeft:10,}]} onPress={ThirdLogin._wechatlogin.bind(this, this)}>
-                                    <Text style={[styles.qqBtnText,styles.weChatBtnText]}>微信登录</Text>
+                                <TouchableOpacity activeOpacity={0.6} style={[styles.qqBtn, styles.weChatBtn, { marginLeft: 10, }]} onPress={ThirdLogin._wechatlogin.bind(this, this)}>
+                                    <Text style={[styles.qqBtnText, styles.weChatBtnText]}>微信登录</Text>
                                 </TouchableOpacity>
                             </View>
 
@@ -292,7 +304,7 @@ export default class CommentForm extends Component {
                         : null
                 }
                 {/*未登录说明 end*/}
-                <View style={styles.commentTab}>
+                {/*<View style={styles.commentTab}>
                     <TouchableOpacity style={[styles.tab, this.state.comformType == 'Single' ? styles.tabActive : null]}
                         onPress={() => {
                             this.setState({
@@ -324,7 +336,7 @@ export default class CommentForm extends Component {
                     >
                         <Text style={[styles.tabText, this.state.comformType == 'double' ? styles.tabTextActive : null]}>多账号</Text>
                     </TouchableOpacity>
-                </View>
+                </View>*/}
                 {/* 单多账号Tab end */}
                 {commentForms}
                 {this.state.comformType != 'Single' ?
@@ -356,19 +368,22 @@ export default class CommentForm extends Component {
 
                 }
                 {/*支付宝账号 end*/}
+
                 <View style={styles.submitBtnView}>
                     <TouchableOpacity
-                        style={styles.submitBtn}
+                        disabled={signState?false:true}
+                        style={[styles.submitBtn,signState?null:{backgroundColor: '#ccc'}]}
                         activeOpacity={0.7}
                         onPress={this.onSubmit.bind(this)}
                     >
-                        <Text style={styles.submitBtnText}>提交</Text>
+                        <Text style={styles.submitBtnText}>提交{signState?null:'(未登录)'}</Text>
                     </TouchableOpacity>
                 </View>
                 {/*提交 end*/}
             </View>
         )
     }
+    
 
     addInputForm() {
         var that = this;
@@ -419,6 +434,25 @@ export default class CommentForm extends Component {
                 index: index
             }
         })
+    }
+    async showPicker(i) {
+        let that = this;
+        try {
+            var newState = {};
+            const { action, year, month, day } = await DatePickerAndroid.open({
+                date: new Date()
+            });
+            if (action !== DatePickerAndroid.dismissedAction) {
+                var date = new Date(year, month, day);
+                that.state.listData[i].investdate = Util.setDate(date);
+                that.setState({
+                    ref: !that.state.ref
+                })
+            }
+        }
+        catch ({ code, message }) {
+            console.warn('Cannot open date picker', message);
+        }
     }
     _keyboardDidShow = (e) => {
         let that = this;
@@ -547,37 +581,37 @@ export default class CommentForm extends Component {
         for (let j = 0; j < listData.length; j++) {
             // userid 判断
             if (comment_field.indexOf('c_userid') >= 0) {
-                if (FormValidation.empty(listData[j].userid, '账号' + (j + 1) + ':' + '用户ID不能为空') == false) {
+                if (FormValidation.empty(listData[j].userid, '用户ID不能为空') == false) {
                     return;
                 }
             }
             // phone 判断
             if (comment_field.indexOf('c_phone') >= 0) {
-                if (FormValidation.phoneValid(listData[j].phone, '账号' + (j + 1) + ':') == false) {
+                if (FormValidation.phoneValid(listData[j].phone, '') == false) {
                     return;
                 }
             }
             // realname 判断
             if (comment_field.indexOf('c_username') >= 0) {
-                if (FormValidation.empty(listData[j].realname, '账号' + (j + 1) + ':' + '真实姓名不能为空') == false) {
+                if (FormValidation.empty(listData[j].realname,'真实姓名不能为空') == false) {
                     return;
                 }
             }
             // plan 判断
             if (listData[j].plan == '请选择') {
-                Alert.alert('提示', '账号' + (j + 1) + ':' + '请选择方案')
+                Alert.alert('提示', '请选择方案')
                 return;
             }
             // investdate 判断
             if (comment_field.indexOf('investdate') >= 0) {
-                if (FormValidation.empty(listData[j].investdate, '账号' + (j + 1) + ':' + '投资日期不能为空') == false) {
+                if (FormValidation.empty(listData[j].investdate, '投资日期不能为空') == false) {
                     return;
                 }
             }
             // 投资截图判断
             if (comment_field.indexOf('img_invest') >= 0) {
                 if (listData[j].fileUri == 'http://www.fanlimofang.com/images/uploadimg.jpg') {
-                    Alert.alert('提示', '账号' + (j + 1) + ':' + '请上传投资截图')
+                    Alert.alert('提示', '请上传投资截图')
                     return;
                 }
             }
@@ -692,7 +726,7 @@ const styles = StyleSheet.create({
         color: '#45b7ee',
         lineHeight: 20,
     },
-    weChatBtn:{
+    weChatBtn: {
         borderColor: '#00d10d',
     },
     weChatBtnText: {

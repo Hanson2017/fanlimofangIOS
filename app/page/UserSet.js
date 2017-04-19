@@ -155,6 +155,7 @@ export default class UserSet extends Component {
                         defaultValue={data.c_phone}
                         onChangeText={(text) => { data.c_phone = text }}
                         clearButtonMode={'while-editing'}
+                        underlineColorAndroid="transparent"
                     />
                 </View>
                 <View style={[styles.inputView, styles.borderBt]}>
@@ -166,6 +167,7 @@ export default class UserSet extends Component {
                         defaultValue={data.c_username}
                         onChangeText={(text) => { data.c_username = text }}
                         clearButtonMode={'while-editing'}
+                        underlineColorAndroid="transparent"
                     />
                 </View>
             </View>
@@ -210,10 +212,7 @@ export default class UserSet extends Component {
 
         let opt = {
             method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
+          
             body: formData
         }
         console.log(formData)

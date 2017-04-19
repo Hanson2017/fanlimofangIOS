@@ -2,7 +2,7 @@
 import Api from '../util/api';
 import StorageLoginInfo from '../config/storageLogin'
 import * as QQAPI from 'react-native-qq';
-import * as WechatAPI from 'react-native-wx';
+// import * as WechatAPI from 'react-native-wx';
 
 module.exports = {
     _qqlogin(that) {

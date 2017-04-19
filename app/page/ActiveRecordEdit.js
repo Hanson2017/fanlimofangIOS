@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, ScrollView, TouchableOpacity, TextInput, Alert, DeviceEventEmitter, Modal } from 'react-native';
+import { Text, StyleSheet, View, ScrollView, TouchableOpacity, TextInput, Alert, DeviceEventEmitter, Modal ,Platform,DatePickerAndroid} from 'react-native';
 import Theme from '../util/theme';
 import Api from '../util/api';
+import Util from '../util/util';
 import Header from '../component/Header';
 import Loading from '../component/Loading';
 import TxtInput from '../component/TextInputListW'
@@ -57,7 +58,7 @@ export default class ActiveRecordEdit extends Component {
                     label={'投资日期'}
                     value={this.state.investdate}
                     ViewInput={true}
-                    onPress={this._selectData.bind(this, this.state.plan)}
+                    onPress={Platform.OS === 'ios' ? this._selectData.bind(this) : this.showPicker.bind(this)}
                 />
         }
         let planstr = this.state.plan.toString()
@@ -144,10 +145,29 @@ export default class ActiveRecordEdit extends Component {
             component: Calendar,
             params: {
                 headerText: '选择日期',
-                investdate:this.state.investdate
+                investdate: this.state.investdate
 
             }
         })
+    }
+    async showPicker() {
+        let that = this;
+        try {
+            var newState = {};
+            const { action, year, month, day } = await DatePickerAndroid.open({
+                date: new Date()
+            });
+            if (action !== DatePickerAndroid.dismissedAction) {
+                var date = new Date(year, month, day);
+                that.setState({
+                    investdate: Util.setDate(date)
+                })
+              
+            }
+        }
+        catch ({ code, message }) {
+            console.warn('Cannot open date picker', message);
+        }
     }
     onSubmit() {
         let that = this;

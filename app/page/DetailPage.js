@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, Image, View, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, DeviceEventEmitter, RefreshControl, ActivityIndicator, Linking } from 'react-native';
+import { Text, StyleSheet, Image, View, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, DeviceEventEmitter, RefreshControl, ActivityIndicator, Linking, Platform } from 'react-native';
 
 import Api from '../util/api';
 import Util from '../util/util';
@@ -22,7 +22,7 @@ class Header extends Component {
     render() {
         let uri = this.props.uri;
         return (
-            <View style={styles.headerContainer}>
+            <View style={[styles.headerContainer, Platform.OS == 'android' ? { marginTop: 0 } : null]}>
                 <TouchableOpacity
                     style={styles.backBtn}
                     onPress={this.goBack.bind(this)}
@@ -77,11 +77,47 @@ var DetailPage = React.createClass({
             let repayText = acinfo.repayday == '当日返现' ? acinfo.repayday : acinfo.repayday + '返现'
             let repaydays = Common.isTag(acinfo.repayday, repayText, styles);
 
+            // 是否结束
+            let isRisk;
+            switch (acinfo.activity.status) {
+                case 1:
+                    if (acinfo.activity.atype == 1) {
+                        isRisk =
+                            (
+                                <View style={[Theme.flexDrow, { marginTop: 10 }]}>
+                                    <Tags tagsName={'风控分:' + acinfo.plat.riskscore} styles={styles} />
+                                    <Tags tagsName={risklevel} styles={styles} />
+                                </View>
+                            )
+                    }
+                    else if (acinfo.activity.atype == 2) {
+                        isRisk =
+                            (
+                                <View style={[Theme.flexDrow, { marginTop: 10 }]}>
+                                    <Tags tagsName={'黄金类产品'} styles={styles} />
+                                </View>
+                            )
+                    }
+                    else if (acinfo.activity.atype == 3) {
+                        isRisk =
+                            (
+                                <View style={[Theme.flexDrow, { marginTop: 10 }]}>
+                                    <Tags tagsName={'基金类产品'} styles={styles} />
+                                </View>
+                            )
+                    }
+                    break;
+
+                case 2:
+                    isRisk = null
+                    break;
+            }
+
             // 关键字
             let keywords = Util.formatSymbol(acinfo.activity.keywords);
-            keywords = keywords.map((keyword,i) => {
+            keywords = keywords.map((keyword, i) => {
                 return (
-                    <Text key={i} style={{ color: '#999', marginRight: 4 }}>{keyword}</Text>
+                    <Text key={i} style={{ color: '#999', marginRight: 4, fontSize: 11 }}>{keyword}</Text>
                 )
             })
 
@@ -96,16 +132,23 @@ var DetailPage = React.createClass({
             // 方案列表
             let planList = plans.map((plan, i) => {
                 let planDetaile = that.state.isHidden[i].hidden ? null : (
-                    <Plans plans={dataSource.plans[i]} siteUrl={siteUrl} code={code} periods={periods} />
+                    <Plans plans={dataSource.plans[i]} siteUrl={siteUrl} code={code} periods={periods} atype={acinfo.activity.atype} special={acinfo.activity.special} />
                 )
                 return (
                     <View style={styles.planList} key={i}>
                         <View style={[Theme.flexDrow]}>
-                            <View style={[styles.planTd1, styles.planTd]}><Text style={styles.planTdText}>{plan.number}</Text></View>
+                            <View style={[styles.planTd1, styles.planTd]}><Text style={styles.planTdText}>{plan.number + ''}</Text></View>
                             <View style={[styles.planTd2, styles.planTd]}><Text style={styles.planTdText}>{plan.termdescription}</Text></View>
                             <View style={[styles.planTd3, styles.planTd]}><Text style={styles.planTdText}>{plan.projects}</Text></View>
-                            <View style={[styles.planTd4, styles.planTd]}><Text style={styles.planTdText}>{plan.invest}+</Text></View>
-                            <View style={[styles.planTd5, styles.planTd]}><Text style={[styles.planTdText, Theme.red]}>{plan.mfrebate}</Text></View>
+                            <View style={[styles.planTd4, styles.planTd]}><Text style={styles.planTdText}>{plan.invest + ''}+</Text></View>
+                            <View style={[styles.planTd5, styles.planTd]}><Text style={[styles.planTdText, Theme.red]}>{plan.mfrebate + ''}</Text></View>
+                            <View style={[styles.planTd]}>
+                                <Text style={[styles.planTdText]}>
+                                    {acinfo.activity.atype != 1 ? '浮动' :
+                                        plan.rebate + ''
+                                    }
+                                </Text>
+                            </View>
                         </View>
                         <TouchableOpacity style={styles.planMore}
                             onPress={() => {
@@ -119,7 +162,7 @@ var DetailPage = React.createClass({
                                 that.setState({
                                     ref: !that.state.ref
                                 })
-          
+
                             }}>
                             <Text style={styles.planMoreText}>{that.state.isHidden[i].moreText}</Text>
                         </TouchableOpacity>
@@ -152,12 +195,12 @@ var DetailPage = React.createClass({
             postinfo += '支付宝帐号';
 
             // 评论
-            let comments = commentData.map((comment,i) => {
+            let comments = commentData.map((comment, i) => {
                 return <Comment index={i} comment={comment} commentField={comment_field} />
             })
 
             let moreComment = null;
-            if (commentData.length >= 5) {
+            if (commentData.length >= 20) {
                 moreComment = (
                     <TouchableOpacity style={styles.moreComment} activeOpacity={0.7} onPress={this.goCommentsPage.bind(this)}>
                         <Text style={styles.moreCommentText}>查看更多评论</Text>
@@ -170,16 +213,16 @@ var DetailPage = React.createClass({
                     <Header navigator={this.props.navigator} uri={uri} />
                     <View style={{ flex: 1 }}>
                         <ScrollView ref={'scroll'}
-                            onContentSizeChange={(contentWidth, contentHeight) => {                              
+                            onContentSizeChange={(contentWidth, contentHeight) => {
                                 this.setState({
-                                    contentHeight:parseInt(contentHeight)
+                                    contentHeight: parseInt(contentHeight)
                                 })
                             }}
                             onScrollEndDrag={(e) => {
                                 this.setState({
-                                    moveH:e.nativeEvent.contentOffset.y
+                                    moveH: e.nativeEvent.contentOffset.y
                                 })
-                         
+
                             }}>
                             <View onStartShouldSetResponderCapture={(e) => { dismissKeyboard(); }}>
                                 <View style={[styles.detailBox, { borderTopWidth: 0 }]}>
@@ -189,14 +232,11 @@ var DetailPage = React.createClass({
                                         {isprotect}
                                         {repaydays}
                                     </View>
-                                    <View style={[Theme.flexDrow, { marginTop: 10 }]}>
-                                        <Tags tagsName={risklevel} styles={styles} />
-                                        <Tags tagsName={'风控得分:' + acinfo.plat.riskscore} styles={styles} />
-                                    </View>
+                                    {isRisk}
                                     <View style={[Theme.flexBtrow, { marginTop: 15 }]}>
-                                        <View><Text style={{ color: '#999' }}>已有{acinfo.commentnum}人参加</Text></View>
+                                        <View><Text style={{ color: '#999', fontSize: 11 }}>已有{acinfo.commentnum + ''}人参加</Text></View>
                                         <View style={Theme.flexDrow}>
-                                            <Text style={{ color: '#999' }}>关键字：</Text>
+                                            <Text style={{ color: '#999', fontSize: 11 }}>关键字：</Text>
                                             {keywords}
                                         </View>
                                     </View>
@@ -210,23 +250,19 @@ var DetailPage = React.createClass({
                                         <View style={[styles.planTd3, styles.planTd]}><Text style={styles.planTdText}>投资项目</Text></View>
                                         <View style={[styles.planTd4, styles.planTd]}><Text style={styles.planTdText}>充值金额</Text></View>
                                         <View style={[styles.planTd5, styles.planTd]}><Text style={styles.planTdText}>魔方返利</Text></View>
+                                        <View style={[styles.planTd]}><Text style={styles.planTdText}>总收益</Text></View>
                                     </View>
                                     {planList}
                                 </View>
-                                <View style={styles.detailBox}>
-                                    <View>
-                                        <Text style={styles.dtText}>特别说明：</Text>
-                                    </View>
-                                    <View style={styles.ddView}>
-                                        <Text style={[styles.ddText, Theme.red]}>{acinfo.activity.special}</Text>
-                                    </View>
-                                </View>
+
                                 <View style={[styles.detailBox, Theme.mt10]}>
                                     <View>
                                         <Text style={styles.dtText}>寻求帮助：</Text>
                                     </View>
                                     <View style={styles.ddView}>
-                                        <Text style={styles.ddText}>申请加QQ群：{this.state.dataSource.qqgroup}，有问题可咨询管理员。</Text>
+                                        <TouchableOpacity activeOpacity={0.7} style={styles.qqOnline} onPress={Util.Linked.bind(this, 'mqqwpa://im/chat?chat_type=wpa&uin=2881041842&version=1&src_type=web&web_src=fanllimofang.com')}>
+                                            <Text style={styles.qqOnlineText}>QQ在线客服</Text>
+                                        </TouchableOpacity>
                                     </View>
                                 </View>
                                 <View style={[styles.detailBox, Theme.mt10]}>
@@ -247,6 +283,19 @@ var DetailPage = React.createClass({
                                         <Text style={styles.ddText}>{postinfo}</Text>
                                     </View>
                                 </View>
+                                {acinfo.activity.comment_picpc ?
+
+                                    <View style={[styles.detailBox, Theme.mt10]}>
+                                        <View>
+                                            <Text style={styles.dtText}>回帖注册ID从哪儿找？</Text>
+                                        </View>
+                                        <View style={styles.ddView}>
+                                            <Image resizeMode={'center'} source={{ uri: Api.domain + acinfo.activity.comment_picpc }} style={{ width: Theme.screenWidth - 24, height: 300 * Theme.screenWidth / 750 }} />
+
+                                        </View>
+                                    </View>
+                                    : null
+                                }
                                 {acinfo.activity.status == 2 ? null :
                                     < View style={[styles.detailBox, Theme.mt10]}>
                                         <CommentForm
@@ -257,7 +306,7 @@ var DetailPage = React.createClass({
                                             KeyboardAvoidingViewData={{
                                                 contentHeight: this.state.contentHeight,  //ScrollView滚动容器高度
                                                 moveH: this.state.moveH,   //ScrollView滑动的距离
-                                                scrollViewDom:this.refs.scroll
+                                                scrollViewDom: this.refs.scroll
                                             }}
                                         />
                                     </View>
@@ -319,7 +368,7 @@ var DetailPage = React.createClass({
     },
     getCommentData: function () {
         let that = this;
-        let url = Api.comment + '?activityid=' + this.props.id + '&page=1&pagesize=5';
+        let url = Api.comment + '?activityid=' + this.props.id + '&page=1&pagesize=20';
 
         fetch(url)
             .then((response) => {
@@ -417,7 +466,7 @@ const styles = StyleSheet.create({
         borderColor: Theme.color,
         borderRadius: 4,
         height: 25,
-        minWidth: 55,
+        minWidth: 68,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -438,24 +487,25 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     planTdText: {
-        color: '#666'
+        color: '#666',
+        fontSize: 11
     },
     planTd1: {
         paddingLeft: 10,
-        width: 50,
+        width: 40,
 
     },
     planTd2: {
-        width: 90,
+        width: 78,
     },
     planTd3: {
-        width: 100,
+        width: 88,
     },
     planTd4: {
-        width: 70,
+        width: 64,
     },
     planTd5: {
-
+        width: 52,
     },
     planMore: {
         borderTopWidth: 1,
@@ -465,7 +515,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     planMoreText: {
-
+        fontSize: 11,
         color: '#999',
     },
     dtText: {
@@ -490,6 +540,20 @@ const styles = StyleSheet.create({
     moreCommentText: {
         color: '#34a0e7',
         fontSize: 15,
+    },
+    qqOnline:{
+        marginTop:6,
+        width:100,
+        height:30,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor:'#D8D8D8',
+        borderRadius:5,
+    },
+    qqOnlineText:{
+        color:'#888',
+        fontSize:13,
     },
 })
 

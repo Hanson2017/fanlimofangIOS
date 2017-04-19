@@ -31,8 +31,9 @@ export default class ListPage extends Component {
                     dataSource={this.state.dataSource}
                     renderRow={this.renderRow.bind(this)}
                     renderFooter={this.renderFooter.bind(this)}
+                   
                     onEndReached={this._onEndReached.bind(this)}
-                    onEndReachedThreshold={0}
+                    onEndReachedThreshold={10}
                     refreshControl={
                         <RefreshControl
                             refreshing={this.state.isRefreshing}

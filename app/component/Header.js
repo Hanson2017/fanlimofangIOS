@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View, TouchableOpacity,Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/Icomoon';
 
 export default class Header extends Component {
@@ -35,7 +35,7 @@ export default class Header extends Component {
             )
         }
         return (
-            <View style={styles.headerContainer}>
+            <View style={[styles.headerContainer,Platform.OS=='android'?{marginTop:0}:null]}>
                 {backView}
                 <View style={styles.textContainer}>
                     <Text style={styles.headerText}>{this.props.headerText}</Text>
