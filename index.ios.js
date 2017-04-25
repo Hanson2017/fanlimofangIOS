@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import codePush from 'react-native-code-push'
 import Navigation from '../flmf/app/config/entry'
 
 export default class Flmf extends Component {
@@ -19,7 +20,9 @@ export default class Flmf extends Component {
       <Navigation />
     );
   }
-  
+  componentDidMount(){
+    codePush.sync()
+  }
  
 }
 

@@ -58,6 +58,7 @@
 		EDC05EF895234EF9B3CF8732 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F08718DF389403AAE12C4C4 /* MaterialCommunityIcons.ttf */; };
 		F485700D11DE4610B7101A6C /* libRCTQQAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EEB117CA364B648B284895 /* libRCTQQAPI.a */; };
 		F9DEE7FA644B4585BC2B9C60 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F011FDD4EB4EBABD79D36E /* libRNImagePicker.a */; };
+		FBE22AD17E1B4B4E801704A9 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F5E911E5844358B35CD90A /* libCodePush.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +258,13 @@
 			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
 			remoteInfo = RNVectorIcons;
 		};
+		8F3A65921EADC8F000802B87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA80F63FC6D44C83B7E3770C /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = CodePush;
+		};
 		8F5D663B1E70E7F900824688 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3709D162E1CA4482A1708695 /* RNImagePicker.xcodeproj */;
@@ -312,6 +320,7 @@
 		46D7A1D9C5C945C3A5421BC5 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		5AAE6BD328064AF3BF9C116E /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		60F5E911E5844358B35CD90A /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 		6D5CC1BE4E9D4351A711A242 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7F7DC6A047ED40F29F8FEA33 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
@@ -325,6 +334,7 @@
 		8F5D669C1E829A8C00824688 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		8F5D66DD1E836B7100824688 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A2EEB117CA364B648B284895 /* libRCTQQAPI.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTQQAPI.a; sourceTree = "<group>"; };
+		AA80F63FC6D44C83B7E3770C /* CodePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
 		BD7B8F65D10D40D2BF11364B /* icomoon.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = icomoon.ttf; path = "../node_modules/react-native-vector-icons/Fonts/icomoon.ttf"; sourceTree = "<group>"; };
 		BFAE28E0DD53497385867824 /* libRCTWeChat.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTWeChat.a; sourceTree = "<group>"; };
 		D3588B5561C144649DC56280 /* RCTWeChat.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTWeChat.xcodeproj; path = "../node_modules/react-native-wx/ios/RCTWeChat.xcodeproj"; sourceTree = "<group>"; };
@@ -365,6 +375,7 @@
 				F9DEE7FA644B4585BC2B9C60 /* libRNImagePicker.a in Frameworks */,
 				F485700D11DE4610B7101A6C /* libRCTQQAPI.a in Frameworks */,
 				8541B605CB36486BA6D6E659 /* libRCTWeChat.a in Frameworks */,
+				FBE22AD17E1B4B4E801704A9 /* libCodePush.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +546,7 @@
 				3709D162E1CA4482A1708695 /* RNImagePicker.xcodeproj */,
 				D3DF28C7761242BC9CBFC216 /* RCTQQAPI.xcodeproj */,
 				D3588B5561C144649DC56280 /* RCTWeChat.xcodeproj */,
+				AA80F63FC6D44C83B7E3770C /* CodePush.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -578,6 +590,14 @@
 			isa = PBXGroup;
 			children = (
 				8F19CE711E66B28F00690932 /* libRNVectorIcons.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F3A658F1EADC8EF00802B87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F3A65931EADC8F000802B87 /* libCodePush.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -723,18 +743,21 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = BL4S7A2TL2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = BF48DF5R65;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = BL4S7A2TL2;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BL4S7A2TL2;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BL4S7A2TL2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -752,6 +775,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 8F3A658F1EADC8EF00802B87 /* Products */;
+					ProjectRef = AA80F63FC6D44C83B7E3770C /* CodePush.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -1006,6 +1033,13 @@
 			remoteRef = 8F19CE701E66B28F00690932 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		8F3A65931EADC8F000802B87 /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 8F3A65921EADC8F000802B87 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		8F5D663C1E70E7F900824688 /* libRNImagePicker.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1187,6 +1221,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1211,6 +1246,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1226,11 +1262,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 18818568910@163.com (VR339XEF46)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = BF48DF5R65;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1246,7 +1282,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
+				PROVISIONING_PROFILE = "67b68368-cc5c-4932-b84f-af5954e7d387";
+				PROVISIONING_PROFILE_SPECIFIER = "返利魔方";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1257,10 +1296,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 18818568910@163.com (VR339XEF46)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BF48DF5R65;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1276,7 +1315,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
+				PROVISIONING_PROFILE = "67b68368-cc5c-4932-b84f-af5954e7d387";
+				PROVISIONING_PROFILE_SPECIFIER = "返利魔方";
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1298,6 +1340,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1335,6 +1378,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1367,6 +1411,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.flmf-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1391,6 +1436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1421,8 +1467,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODEPUSH_KEY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1441,6 +1490,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "67b68368-cc5c-4932-b84f-af5954e7d387";
+				PROVISIONING_PROFILE_SPECIFIER = "返利魔方";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1462,8 +1513,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODEPUSH_KEY = "YVb-7vYtTc1SrxZ_or7LG7d9Z8RP4y28-4rpM";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1475,10 +1529,173 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "67b68368-cc5c-4932-b84f-af5954e7d387";
+				PROVISIONING_PROFILE_SPECIFIER = "返利魔方";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		8F3A65B11EADCEA300802B87 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODEPUSH_KEY = "rmInVIHAN1rTTqIl75gzxJH020l_4y28-4rpM";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "67b68368-cc5c-4932-b84f-af5954e7d387";
+				PROVISIONING_PROFILE_SPECIFIER = "返利魔方";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Staging;
+		};
+		8F3A65B21EADCEA300802B87 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
+				INFOPLIST_FILE = flmf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-isystem",
+					"\"$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+					"-framework",
+					"\"TencentOpenAPI\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
+				PRODUCT_NAME = flmf;
+				PROVISIONING_PROFILE = "67b68368-cc5c-4932-b84f-af5954e7d387";
+				PROVISIONING_PROFILE_SPECIFIER = "返利魔方";
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Staging;
+		};
+		8F3A65B31EADCEA300802B87 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = flmfTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flmf.app/flmf";
+			};
+			name = Staging;
+		};
+		8F3A65B41EADCEA300802B87 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "flmf-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.flmf-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Staging;
+		};
+		8F3A65B51EADCEA300802B87 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "flmf-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.flmf-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flmf-tvOS.app/flmf-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Staging;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1488,6 +1705,7 @@
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
 				00E356F71AD99517003FC87E /* Release */,
+				8F3A65B31EADCEA300802B87 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1497,6 +1715,7 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+				8F3A65B21EADCEA300802B87 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1506,6 +1725,7 @@
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
 				2D02E4981E0B4A5E006451C7 /* Release */,
+				8F3A65B41EADCEA300802B87 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1515,6 +1735,7 @@
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
 				2D02E49A1E0B4A5E006451C7 /* Release */,
+				8F3A65B51EADCEA300802B87 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1524,6 +1745,7 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+				8F3A65B11EADCEA300802B87 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

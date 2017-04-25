@@ -8,6 +8,7 @@
  */
 
 #import "AppDelegate.h"
+#import <CodePush/CodePush.h>
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -20,8 +21,13 @@
 {
   NSURL *jsCodeLocation;
 
- jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
-//  jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.111:8081/index.ios.bundle?platform=ios&dev=true"];
+//  
+#ifdef DEBUG
+    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+#else
+    jsCodeLocation = [CodePush bundleURL];
+#endif
+ jsCodeLocation = [NSURL URLWithString:@"http://192.168.1.210:8081/index.ios.bundle?platform=ios&dev=true"];
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"flmf"
