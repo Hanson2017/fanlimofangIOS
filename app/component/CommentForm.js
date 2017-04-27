@@ -749,7 +749,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     FormListLabel: {
-        width: 90,
+        width: 80,
     },
     FormListLabelText: {
         color: '#999',
@@ -760,7 +760,7 @@ const styles = StyleSheet.create({
     ViewInput: {
         padding: 8,
         height: 32,
-        width: 240,
+        width: 220,
         borderWidth: 1,
         borderColor: '#ccc',
         justifyContent: 'center',
@@ -768,7 +768,7 @@ const styles = StyleSheet.create({
     textInput: {
         padding: 8,
         height: 32,
-        width: 240,
+        width: 220,
         borderWidth: 1,
         borderColor: '#ccc',
         color: '#666'
