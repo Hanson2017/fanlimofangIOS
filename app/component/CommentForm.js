@@ -193,15 +193,50 @@ export default class CommentForm extends Component {
     }
     planFunction(i) {
         let that = this;
-
+        let plans = this.props.plans;
         let selectNo = this.state.listData[i].plan == '请选择' ? 1 : this.state.listData[i].plan
 
-        let planView = this.CommentFormList('所选方案', {},
-            {
-                value: that.state.listData[i].plan,
-                onPress: this.props.isShowSelect.bind(this,selectNo)
+         
+
+        let planView;
+        if (Platform.OS === 'ios') {
+            planView = this.CommentFormList('所选方案', {},
+                {
+                    value: that.state.listData[i].plan,
+                    onPress: this.props.isShowSelect.bind(this, selectNo)
+                }
+            )
+        }
+        else if (Platform.OS === 'android') {
+            let selectList = [{number:'请选择',value:'请选择'}];
+        
+            for (let i = 0; i < plans.length; i++) {
+                selectList.push({ number: plans[i].number, value: '方案' + plans[i].number })
             }
-        )
+            planView = (
+                <View style={styles.FormList}>
+                    <View style={styles.FormListLabel}><Text style={styles.FormListLabelText}>所选方案</Text></View>
+                    <View style={styles.FormListInputView}>
+                        <View style={[styles.ViewInput,{paddingLeft:0}]}>
+                        <Picker
+                            style={{height:65,fontSize:12,color:'#666',}}
+                          
+                            selectedValue={that.state.listData[i].plan}
+                            onValueChange={(lang) => {
+                                that.state.listData[i].plan = lang
+                                that.setState({
+                                    ref: !that.state.ref
+                                })
+                            }}
+                        >
+                            {selectList.map((aOption) => <Picker.Item    itemStyle={{fontSize:12}} label={aOption.value} value={aOption.number} key={aOption.number} />)}
+                        </Picker>
+                        </View>
+                    </View>
+                </View>
+            )
+        }
+
         return planView;
     }
 
@@ -383,7 +418,7 @@ export default class CommentForm extends Component {
                     </TouchableOpacity>
                 </View>
                 {/*提交 end*/}
-            
+
             </View>
         )
     }
@@ -412,7 +447,7 @@ export default class CommentForm extends Component {
         })
         this.state.listData.splice(index, 1)
     }
-    
+
     async showPicker(i) {
         let that = this;
         try {
@@ -472,14 +507,14 @@ export default class CommentForm extends Component {
             DeviceEventEmitter.addListener('select', (data) => {
                 that.state.listData[0].plan = data;
                 that.setState({
-                    ref:!that.state.ref
+                    ref: !that.state.ref
                 })
             }),
             DeviceEventEmitter.addListener('selectDate', (data) => {
-                
+
                 that.state.listData[0].investdate = data;
                 that.setState({
-                    ref:!that.state.ref
+                    ref: !that.state.ref
                 })
             })
         ]
