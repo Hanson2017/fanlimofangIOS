@@ -9,6 +9,9 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *appKeyMTA = @"Aqc1105723862";
+static NSString *appKeyJpush = @"27026d89e3c820596b88e4c1";
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) UIWindow *window;

@@ -44,6 +44,19 @@
 		8F19CE721E66B2B200690932 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F19CE711E66B28F00690932 /* libRNVectorIcons.a */; };
 		8F354ADC1ECEC8B60073C9AB /* bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F354ADB1ECEC8B60073C9AB /* bundle */; };
 		8F3A58BC1F31D3740073EF3E /* libmtasdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58BB1F31D3740073EF3E /* libmtasdk.a */; };
+		8F3A58BE1F31D4610073EF3E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58BD1F31D4610073EF3E /* QuartzCore.framework */; };
+		8F3A58C01F31D4790073EF3E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58BF1F31D4790073EF3E /* Security.framework */; };
+		8F3A58C21F31D4890073EF3E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58C11F31D4890073EF3E /* CFNetwork.framework */; };
+		8F3A58C41F31D4940073EF3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58C31F31D4940073EF3E /* SystemConfiguration.framework */; };
+		8F3A58C61F31D4B00073EF3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58C51F31D4B00073EF3E /* UIKit.framework */; };
+		8F3A58C81F31D4BF0073EF3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58C71F31D4BF0073EF3E /* Foundation.framework */; };
+		8F3A58CA1F31D4CD0073EF3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58C91F31D4CD0073EF3E /* CoreGraphics.framework */; };
+		8F3A58CE1F31DD770073EF3E /* jcore-ios-1.1.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58CC1F31DD770073EF3E /* jcore-ios-1.1.5.a */; };
+		8F3A58CF1F31DD770073EF3E /* jpush-ios-3.0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58CD1F31DD770073EF3E /* jpush-ios-3.0.6.a */; };
+		8F3A58D11F31DDB60073EF3E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58D01F31DDB60073EF3E /* CoreFoundation.framework */; };
+		8F3A58D31F31DDEC0073EF3E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58D21F31DDEC0073EF3E /* AdSupport.framework */; };
+		8F3A58D51F31DDFD0073EF3E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58D41F31DDFD0073EF3E /* UserNotifications.framework */; };
+		8F3A58D71F31DE0F0073EF3E /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3A58D61F31DE0F0073EF3E /* libresolv.tbd */; };
 		8F5D66971E829A6300824688 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5D66961E829A6300824688 /* libiconv.tbd */; };
 		8F5D66991E829A7200824688 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5D66981E829A7200824688 /* libsqlite3.tbd */; };
 		8F5D669B1E829A8000824688 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5D669A1E829A8000824688 /* libz.tbd */; };
@@ -334,6 +347,21 @@
 		8F3A58B91F31D29B0073EF3E /* MTAConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTAConfig.h; path = flmf/MTAConfig.h; sourceTree = "<group>"; };
 		8F3A58BA1F31D29B0073EF3E /* MTACrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTACrashReporter.h; path = flmf/MTACrashReporter.h; sourceTree = "<group>"; };
 		8F3A58BB1F31D3740073EF3E /* libmtasdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmtasdk.a; sourceTree = "<group>"; };
+		8F3A58BD1F31D4610073EF3E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8F3A58BF1F31D4790073EF3E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8F3A58C11F31D4890073EF3E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8F3A58C31F31D4940073EF3E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8F3A58C51F31D4B00073EF3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8F3A58C71F31D4BF0073EF3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8F3A58C91F31D4CD0073EF3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8F3A58CB1F31DD600073EF3E /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JPUSHService.h; path = flmf/JPUSHService.h; sourceTree = "<group>"; };
+		8F3A58CC1F31DD770073EF3E /* jcore-ios-1.1.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.5.a"; sourceTree = "<group>"; };
+		8F3A58CD1F31DD770073EF3E /* jpush-ios-3.0.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.6.a"; sourceTree = "<group>"; };
+		8F3A58D01F31DDB60073EF3E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8F3A58D21F31DDEC0073EF3E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		8F3A58D41F31DDFD0073EF3E /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8F3A58D61F31DE0F0073EF3E /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		8F3A58D81F31DE710073EF3E /* flmf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = flmf.entitlements; path = flmf/flmf.entitlements; sourceTree = "<group>"; };
 		8F5D66961E829A6300824688 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		8F5D66981E829A7200824688 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8F5D669A1E829A8000824688 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -362,12 +390,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F3A58D71F31DE0F0073EF3E /* libresolv.tbd in Frameworks */,
+				8F3A58D51F31DDFD0073EF3E /* UserNotifications.framework in Frameworks */,
+				8F3A58D31F31DDEC0073EF3E /* AdSupport.framework in Frameworks */,
+				8F3A58D11F31DDB60073EF3E /* CoreFoundation.framework in Frameworks */,
+				8F3A58CA1F31D4CD0073EF3E /* CoreGraphics.framework in Frameworks */,
+				8F3A58C81F31D4BF0073EF3E /* Foundation.framework in Frameworks */,
+				8F3A58C61F31D4B00073EF3E /* UIKit.framework in Frameworks */,
+				8F3A58C41F31D4940073EF3E /* SystemConfiguration.framework in Frameworks */,
+				8F3A58C21F31D4890073EF3E /* CFNetwork.framework in Frameworks */,
+				8F3A58C01F31D4790073EF3E /* Security.framework in Frameworks */,
+				8F3A58BE1F31D4610073EF3E /* QuartzCore.framework in Frameworks */,
 				8F5D66DE1E836B7100824688 /* CoreTelephony.framework in Frameworks */,
+				8F3A58CF1F31DD770073EF3E /* jpush-ios-3.0.6.a in Frameworks */,
 				8F5D669D1E829A8C00824688 /* libc++.tbd in Frameworks */,
 				8F5D669B1E829A8000824688 /* libz.tbd in Frameworks */,
 				8F5D66991E829A7200824688 /* libsqlite3.tbd in Frameworks */,
 				8F5D66971E829A6300824688 /* libiconv.tbd in Frameworks */,
 				8F19CE721E66B2B200690932 /* libRNVectorIcons.a in Frameworks */,
+				8F3A58CE1F31DD770073EF3E /* jcore-ios-1.1.5.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -492,6 +533,8 @@
 		13B07FAE1A68108700A75B9A /* flmf */ = {
 			isa = PBXGroup;
 			children = (
+				8F3A58D81F31DE710073EF3E /* flmf.entitlements */,
+				8F3A58CB1F31DD600073EF3E /* JPUSHService.h */,
 				8F3A58B81F31D29B0073EF3E /* MTA.h */,
 				8F3A58B91F31D29B0073EF3E /* MTAConfig.h */,
 				8F3A58BA1F31D29B0073EF3E /* MTACrashReporter.h */,
@@ -633,6 +676,19 @@
 		8F5D66951E829A6300824688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F3A58D61F31DE0F0073EF3E /* libresolv.tbd */,
+				8F3A58D41F31DDFD0073EF3E /* UserNotifications.framework */,
+				8F3A58D21F31DDEC0073EF3E /* AdSupport.framework */,
+				8F3A58D01F31DDB60073EF3E /* CoreFoundation.framework */,
+				8F3A58CC1F31DD770073EF3E /* jcore-ios-1.1.5.a */,
+				8F3A58CD1F31DD770073EF3E /* jpush-ios-3.0.6.a */,
+				8F3A58C91F31D4CD0073EF3E /* CoreGraphics.framework */,
+				8F3A58C71F31D4BF0073EF3E /* Foundation.framework */,
+				8F3A58C51F31D4B00073EF3E /* UIKit.framework */,
+				8F3A58C31F31D4940073EF3E /* SystemConfiguration.framework */,
+				8F3A58C11F31D4890073EF3E /* CFNetwork.framework */,
+				8F3A58BF1F31D4790073EF3E /* Security.framework */,
+				8F3A58BD1F31D4610073EF3E /* QuartzCore.framework */,
 				8F3A58BB1F31D3740073EF3E /* libmtasdk.a */,
 				8F5D66DD1E836B7100824688 /* CoreTelephony.framework */,
 				8F5D669C1E829A8C00824688 /* libc++.tbd */,
@@ -763,6 +819,14 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = BL4S7A2TL2;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1287,11 +1351,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = BL4S7A2TL2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1311,10 +1377,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bigbox.fanlimofang;
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "33472610-2032-486c-81b0-9125a61e1b32";
-				PROVISIONING_PROFILE_SPECIFIER = pptest;
+				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1325,10 +1391,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BL4S7A2TL2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1348,10 +1416,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bigbox.fanlimofang;
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "33472610-2032-486c-81b0-9125a61e1b32";
-				PROVISIONING_PROFILE_SPECIFIER = pptest;
+				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1614,10 +1682,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BL4S7A2TL2;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1637,10 +1707,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bigbox.fanlimofang;
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "33472610-2032-486c-81b0-9125a61e1b32";
-				PROVISIONING_PROFILE_SPECIFIER = pptest;
+				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
