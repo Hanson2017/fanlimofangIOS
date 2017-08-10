@@ -47,7 +47,7 @@ export default class Flmf extends Component {
   }
   componentDidMount() {
     let that = this;
-    let url = 'http://www.fanlimofang.com/DataApi/GetVersion?version=3.0.2'
+    let url = 'http://www.fanlimofang.com/DataApi/GetVersion?version=3.0.20'
     fetch(url)
       .then((response) => {
         if (response.ok) {
