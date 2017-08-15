@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, Image, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, Image, View, TouchableOpacity,Platform } from 'react-native';
 import Theme from '../util/theme';
 import Api from '../util/api';
 import Util from '../util/util';
@@ -88,7 +88,7 @@ export default class Item extends Component {
             <View>
                
                 <TouchableOpacity onPress={this.goDetail.bind(this, data.activity.id, data.plat.platname)} style={styles.item} activeOpacity={0.8}>
-                    <View style={[Theme.flexDrow, styles.listHd]}>
+                    <View style={[Theme.flexDrow, styles.listHd,Platform.OS=='android'?{paddingTop:5}:null]}>
                         <Image source={{ uri: uri }} style={{ width: 70, height: 28 }} />
                         <View style={[Theme.flexDrow, { marginTop: -5, marginLeft: 8 }]}>
                             <View style={styles.listHdType}><Text style={styles.listHdTypeText}>{investType}</Text></View>
