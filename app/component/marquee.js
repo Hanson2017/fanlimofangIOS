@@ -19,7 +19,7 @@ export default class extends Component {
         };
     }
     componentDidMount() {
-        this.showHeadBar(0, 5);         //从第0条开始，轮播5条数据
+        this.showHeadBar(0, this.props.data.length);         //从第0条开始，轮播5条数据
     }
     showHeadBar(index, count) {
         index++;
@@ -47,10 +47,11 @@ export default class extends Component {
                     style={[styles.wrapper, {
                         transform: [{
                             translateY: this.state.translateY
-                        }]
+                        }],
+                        height:data.length*40
                     }
                     ]}
-                >
+                >              
                     {
                         data.map((item, i) => {
                             return (
@@ -64,7 +65,7 @@ export default class extends Component {
                                         })
                                     }}
                                 >
-                                    <Text style={styles.barText}>{item.title}</Text>
+                                    <Text numberOfLines={1} style={styles.barText}>{item.title}</Text>
                                 </TouchableOpacity>
                             )
                         })
@@ -79,7 +80,7 @@ export default class extends Component {
                             })
                         }}
                     >
-                        <Text style={styles.barText}>{data[data.length - 1].title}</Text>
+                        <Text numberOfLines={1} style={styles.barText}>{data[data.length - 1].title}</Text>
                     </TouchableOpacity>
                 </Animated.View>
             </View>
@@ -106,6 +107,7 @@ const styles = StyleSheet.create({
     },
     wrapper: {
         marginHorizontal: 5,
+      
     },
     bar: {
         height: 40,
