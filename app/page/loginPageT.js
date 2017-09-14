@@ -51,7 +51,7 @@ export default class Login extends Component {
             this.props.navigator.pop();
         }
         else{
-            this.props.navigator.replacePrevious({
+            this.props.navigator.replace({
                 component: MainPage
             })
         }
