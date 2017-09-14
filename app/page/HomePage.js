@@ -264,6 +264,7 @@ var styles = StyleSheet.create({
         fontSize: 13,
     },
     ItemNew: {
+        overflow: 'hidden',
         paddingLeft: 5,
         paddingRight: 5,
         paddingTop: 8,
