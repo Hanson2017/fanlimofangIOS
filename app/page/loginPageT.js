@@ -47,7 +47,7 @@ export default class Login extends Component {
     
     goBackSuccee() {
         DeviceEventEmitter.emit('loginState', '登录好了')
-        if(this.props.source){
+        if(this.props.source && this.props.source == 'home'){
             this.props.navigator.pop();
         }
         else{
