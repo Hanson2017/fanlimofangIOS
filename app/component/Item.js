@@ -44,10 +44,16 @@ export default class Item extends Component {
                             <Tags tagsName={'黄金类产品'} styles={styles} />
                         )
                 }
-                else if (data.activity.atype == 3 || data.activity.atype == 4) {
+                else if (data.activity.atype == 3) {
                     isRisk =
                         (
                             <Tags tagsName={'基金类产品'} styles={styles} />
+                        )
+                }
+                else if (data.activity.atype == 4) {
+                    isRisk =
+                        (
+                            <Tags tagsName={'固收类产品'} styles={styles} />
                         )
                 }
                 else {
