@@ -6,7 +6,7 @@ import Theme from '../util/theme';
 import DetailPage from '../page/DetailPage';
 import Item from '../component/Item';
 import Loading from '../component/Loading';
-import StorageLoginInfo from '../config/storageLogin'
+
 
 export default class SearchBtn extends React.Component {
     constructor(props) {
@@ -142,7 +142,7 @@ export default class SearchBtn extends React.Component {
 
 
         let url = Api.searchActivity + '?keywords=' + keywords + '&page=' + this.page + '&pagesize=' + 5;
-        console.log(url)
+
         setTimeout(() => {
             fetch(url)
                 .then((response) => {
@@ -165,7 +165,7 @@ export default class SearchBtn extends React.Component {
                                     totalNum: responseData.totalNum,
                                     pageSize: responseData.pageSize,
                                 })
-                                console.log(responseData)
+           
                             })
                     }
                     else {

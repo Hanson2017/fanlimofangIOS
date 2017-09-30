@@ -188,7 +188,7 @@ export default class SearchBtn extends React.Component {
                     historyky.push(historyKeyWords[i].title)
                 }
                 var index = historyky.indexOf(searchText);
-                console.log('index',index)
+      
                 if (index != -1) {
                     historyKeyWords.splice(index, 1)
                 }
