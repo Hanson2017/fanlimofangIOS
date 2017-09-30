@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import codePush from 'react-native-code-push'
 import Navigation from '../flmf/app/config/entry'
-import VirtualMain from './virtual/main'
+import VirtualMain from './virtual/config/entry'
 import Loading from './app/component/Loading'
 
 export default class Flmf extends Component {
