@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -624,6 +625,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				F9A9B0AB522F4B4AA09188CB /* Resources */,
 				8F5D66951E829A6300824688 /* Frameworks */,
+				8FB2DA061F90917000126E6A /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -704,6 +706,17 @@
 				8F5D66C51E836ACB00824688 /* libRCTWeChat.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8FB2DA061F90917000126E6A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				01F011FDD4EB4EBABD79D36E /* libRNImagePicker.a */,
+				A2EEB117CA364B648B284895 /* libRCTQQAPI.a */,
+				BFAE28E0DD53497385867824 /* libRCTWeChat.a */,
+				60F5E911E5844358B35CD90A /* libCodePush.a */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		F9A9B0AB522F4B4AA09188CB /* Resources */ = {
@@ -816,7 +829,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = BL4S7A2TL2;
+						DevelopmentTeam = W3FXVB9A7E;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1351,11 +1364,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = BL4S7A2TL2;
+				DEVELOPMENT_TEAM = W3FXVB9A7E;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
@@ -1376,10 +1389,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanlimofang.brothers;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
+				PROVISIONING_PROFILE = "a837e7e3-da73-44b6-9418-8ca859764143";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProProduct;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1391,10 +1404,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BL4S7A2TL2;
+				DEVELOPMENT_TEAM = W3FXVB9A7E;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
@@ -1415,10 +1428,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanlimofang.brothers;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
+				PROVISIONING_PROFILE = "a837e7e3-da73-44b6-9418-8ca859764143";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProProduct;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1682,10 +1695,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BL4S7A2TL2;
+				DEVELOPMENT_TEAM = W3FXVB9A7E;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
@@ -1706,10 +1719,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fanlimofang.brothers;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
+				PROVISIONING_PROFILE = "a837e7e3-da73-44b6-9418-8ca859764143";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProProduct;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

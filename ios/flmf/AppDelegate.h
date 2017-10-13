@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 static NSString *appKeyMTA = @"Aqc1105723862";
-static NSString *appKeyJpush = @"27026d89e3c820596b88e4c1";
+static NSString *appKeyJpush = @"41a398c071c306b0a31f1da7";
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
