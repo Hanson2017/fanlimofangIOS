@@ -15,6 +15,8 @@ import codePush from 'react-native-code-push'
 import Navigation from '../flmf/app/config/entry'
 import VirtualMain from './virtual/config/entry'
 import Loading from './app/component/Loading'
+var BackboneEvents = require("backbone-events-standalone");
+window.EventEmitter = BackboneEvents.mixin({});
 
 export default class Flmf extends Component {
   constructor(props) {
@@ -48,7 +50,7 @@ export default class Flmf extends Component {
   componentDidMount() {
     let that = this;
     codePush.sync()
-    let url = 'http://www.fanlimofang.com/DataApi/GetVersion_dashu?version=3.0.20'
+    let url = 'http://www.fanlimofang.com/DataApi/GetVersion_dashu?version=3.0.2'
     fetch(url)
       .then((response) => {
         if (response.ok) {
@@ -58,7 +60,6 @@ export default class Flmf extends Component {
                 status: responseData,
                 loading: true
               })
-              console.log(hotData)
             })
         }
         else {

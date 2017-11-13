@@ -45,6 +45,12 @@
       "idiom" : "iphone",
       "filename" : "flmf180.png",
       "scale" : "3x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "flmf3.png",
+      "scale" : "1x"
     }
   ],
   "info" : {
