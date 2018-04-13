@@ -117,14 +117,14 @@ const styles = StyleSheet.create({
         paddingLeft: 4,
         paddingRight: 4,
         borderWidth: 0.5,
-        borderColor: '#FF6666',
+        borderColor: '#E62344',
         borderRadius: 3,
         height: 15,
         alignItems: 'center',
         justifyContent: 'center',
     },
     tagText: {
-        color: '#FF6666',
+        color: '#E62344',
         fontSize: 10,
     },
     tagFirst: {

@@ -219,10 +219,10 @@ const styles = StyleSheet.create({
     },
     tagsHd: {
         marginRight: 8,
-        borderColor: Theme.color,
+        borderColor: '#E62344',
     },
     tagsTextHd: {
-        color: Theme.color,
+        color: '#E62344',
     },
     tagsFirst: {
         borderColor: '#67cbdb',
@@ -250,7 +250,7 @@ const styles = StyleSheet.create({
     },
     listBdliTextNum: {
         fontSize: 18,
-        color: '#E55F73',
+        color: '#E62344',
     },
     listFt: {
         flexDirection: 'row',
