@@ -14,7 +14,7 @@ import {
 import codePush from 'react-native-code-push'
 import Navigation from '../flmf/app/config/entry'
 import VirtualMain from './virtual/config/entry'
-import Loading from './app/component/Loading'
+import Loading from './app/component/loading'
 var BackboneEvents = require("backbone-events-standalone");
 window.EventEmitter = BackboneEvents.mixin({});
 

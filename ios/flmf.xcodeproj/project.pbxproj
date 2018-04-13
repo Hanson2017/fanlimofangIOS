@@ -63,6 +63,9 @@
 		8F5D669D1E829A8C00824688 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5D669C1E829A8C00824688 /* libc++.tbd */; };
 		8F5D66DE1E836B7100824688 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F5D66DD1E836B7100824688 /* CoreTelephony.framework */; };
 		8F8CE29B1EB9BC02003C539C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8F8CE29A1EB9BC02003C539C /* Fonts */; };
+		8FD8643C2074D8ED0048B28A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8643B2074D8ED0048B28A /* GameKit.framework */; };
+		8FD8643E2074D91E0048B28A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8643D2074D91D0048B28A /* StoreKit.framework */; };
+		8FD864402074D9270048B28A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD8643F2074D9260048B28A /* AudioToolbox.framework */; };
 		9063E488C057455389B35FFE /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CE2D462BF8B409D8B973399 /* FontAwesome.ttf */; };
 		942CFC583BEB48D5AAA5ED2D /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D78B43B7F4D460AA2962DE5 /* EvilIcons.ttf */; };
 		B3D7F3C4D7024299BFF5958B /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE6BD328064AF3BF9C116E /* Octicons.ttf */; };
@@ -368,6 +371,9 @@
 		8F5D669C1E829A8C00824688 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		8F5D66DD1E836B7100824688 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		8F8CE29A1EB9BC02003C539C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
+		8FD8643B2074D8ED0048B28A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8FD8643D2074D91D0048B28A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8FD8643F2074D9260048B28A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A2EEB117CA364B648B284895 /* libRCTQQAPI.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTQQAPI.a; sourceTree = "<group>"; };
 		AA80F63FC6D44C83B7E3770C /* CodePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = CodePush.xcodeproj; path = "../node_modules/react-native-code-push/ios/CodePush.xcodeproj"; sourceTree = "<group>"; };
 		BD7B8F65D10D40D2BF11364B /* icomoon.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = icomoon.ttf; path = "../node_modules/react-native-vector-icons/Fonts/icomoon.ttf"; sourceTree = "<group>"; };
@@ -409,6 +415,7 @@
 				8F5D66971E829A6300824688 /* libiconv.tbd in Frameworks */,
 				8F19CE721E66B2B200690932 /* libRNVectorIcons.a in Frameworks */,
 				8F3A58CE1F31DD770073EF3E /* jcore-ios-1.1.5.a in Frameworks */,
+				8FD8643E2074D91E0048B28A /* StoreKit.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -417,6 +424,7 @@
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				8FD8643C2074D8ED0048B28A /* GameKit.framework in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
@@ -425,6 +433,7 @@
 				8541B605CB36486BA6D6E659 /* libRCTWeChat.a in Frameworks */,
 				FBE22AD17E1B4B4E801704A9 /* libCodePush.a in Frameworks */,
 				8F3A58BC1F31D3740073EF3E /* libmtasdk.a in Frameworks */,
+				8FD864402074D9270048B28A /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +686,9 @@
 		8F5D66951E829A6300824688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8FD8643F2074D9260048B28A /* AudioToolbox.framework */,
+				8FD8643D2074D91D0048B28A /* StoreKit.framework */,
+				8FD8643B2074D8ED0048B28A /* GameKit.framework */,
 				8F3A58D61F31DE0F0073EF3E /* libresolv.tbd */,
 				8F3A58D41F31DDFD0073EF3E /* UserNotifications.framework */,
 				8F3A58D21F31DDEC0073EF3E /* AdSupport.framework */,
@@ -824,15 +836,24 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = W3FXVB9A7E;
+						DevelopmentTeam = BL4S7A2TL2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = W3FXVB9A7E;
+						DevelopmentTeam = BL4S7A2TL2;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
 								enabled = 1;
 							};
 							com.apple.Push = {
@@ -842,12 +863,12 @@
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = W3FXVB9A7E;
+						DevelopmentTeam = BL4S7A2TL2;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = W3FXVB9A7E;
+						DevelopmentTeam = BL4S7A2TL2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -1301,7 +1322,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1335,7 +1356,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				INFOPLIST_FILE = flmfTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1364,12 +1385,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
@@ -1390,10 +1411,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fanlimofang.brothers;
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "a837e7e3-da73-44b6-9418-8ca859764143";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProProduct;
+				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
+				PROVISIONING_PROFILE_SPECIFIER = flmfTest;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1405,11 +1426,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
@@ -1430,10 +1451,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fanlimofang.brothers;
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "a837e7e3-da73-44b6-9418-8ca859764143";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProProduct;
+				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
+				PROVISIONING_PROFILE_SPECIFIER = flmfTest;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1583,10 +1604,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODEPUSH_KEY = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: qisong hu (YD75HU55ZV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qisong hu (YD75HU55ZV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1605,8 +1626,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "9e01712a-e1b3-427a-9e8b-66af66f88ac6";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProText;
+				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
+				PROVISIONING_PROFILE_SPECIFIER = flmfText;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1629,10 +1650,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODEPUSH_KEY = "YVb-7vYtTc1SrxZ_or7LG7d9Z8RP4y28-4rpM";
-				CODE_SIGN_IDENTITY = "iPhone Developer: qisong hu (YD75HU55ZV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qisong hu (YD75HU55ZV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1644,8 +1665,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "9e01712a-e1b3-427a-9e8b-66af66f88ac6";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProText;
+				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
+				PROVISIONING_PROFILE_SPECIFIER = flmfText;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1669,10 +1690,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODEPUSH_KEY = "rmInVIHAN1rTTqIl75gzxJH020l_4y28-4rpM";
-				CODE_SIGN_IDENTITY = "iPhone Developer: qisong hu (YD75HU55ZV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: qisong hu (YD75HU55ZV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1684,8 +1705,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "9e01712a-e1b3-427a-9e8b-66af66f88ac6";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProText;
+				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
+				PROVISIONING_PROFILE_SPECIFIER = flmfText;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1697,11 +1718,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen dais brothers technology co. LTD (W3FXVB9A7E)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-qq/ios/RCTQQAPI";
 				INFOPLIST_FILE = flmf/Info.plist;
@@ -1722,10 +1743,10 @@
 					"-framework",
 					"\"TencentOpenAPI\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fanlimofang.brothers;
+				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "a837e7e3-da73-44b6-9418-8ca859764143";
-				PROVISIONING_PROFILE_SPECIFIER = flmfProProduct;
+				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
+				PROVISIONING_PROFILE_SPECIFIER = flmfTest;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1738,7 +1759,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = W3FXVB9A7E;
+				DEVELOPMENT_TEAM = BL4S7A2TL2;
 				INFOPLIST_FILE = flmfTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
