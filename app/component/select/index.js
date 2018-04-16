@@ -64,7 +64,9 @@ export default class Select extends Component {
                         <Picker
                             itemStyle={styles.itempicker}
                             selectedValue={this.state.choice}
-                            onValueChange={(choice) => that.setState({ choice: choice })}>
+                            onValueChange={(choice) =>{ 
+                                   that.setState({ choice: choice })
+                           }}>
                             {this.options.map((aOption) =>  <Picker.Item  label={aOption.value} value={aOption.number} key={aOption.number} /> )}  
                           
                         </Picker>

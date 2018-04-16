@@ -19,7 +19,7 @@ export default class CommentForm extends Component {
             userID: '',
             userPhone: '',
             userRealName: '',
-            investPlan: '请选择',
+            investPlan: 1,
             investDate: Util.setDate(new Date()),
             alipayId: '',
             fileUri: '',
@@ -146,7 +146,7 @@ export default class CommentForm extends Component {
                             <Text style={styles.label}>所选方案</Text>
                             <View style={styles.ViewInput}>
                                 <Picker
-                                    style={{ height: 80, color: '#666', }}
+                                    style={{ height: 80, color: '#666',fontSize:11, }}
                                     selectedValue={investPlan}
                                     onValueChange={(lang) => {
                                         this.setState({

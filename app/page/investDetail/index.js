@@ -207,7 +207,6 @@ export default class DetailPage extends Component {
                             for (let i = 0; i < plans.length; i++) {
                                 selectList.push({ number: plans[i].number, value: '方案' + plans[i].number })
                             }
-
                             that.setState({
                                 isRefreshing: false,
                                 loading: false,

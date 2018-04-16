@@ -1385,8 +1385,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -1413,8 +1413,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
-				PROVISIONING_PROFILE_SPECIFIER = flmfTest;
+				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1426,8 +1426,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BL4S7A2TL2;
@@ -1453,8 +1453,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
-				PROVISIONING_PROFILE_SPECIFIER = flmfTest;
+				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1718,8 +1718,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = flmf/flmf.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hua Li (D9WT8Y25PT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hua Li (D9WT8Y25PT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen Big Money Box Technology Co., Ltd. (BL4S7A2TL2)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BL4S7A2TL2;
@@ -1745,8 +1745,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lihua.fanlimofang;
 				PRODUCT_NAME = flmf;
-				PROVISIONING_PROFILE = "fc95776d-9b3a-428e-a0b5-d36c3f2e0139";
-				PROVISIONING_PROFILE_SPECIFIER = flmfTest;
+				PROVISIONING_PROFILE = "db2d370e-d923-4d1b-a1a6-769318486f26";
+				PROVISIONING_PROFILE_SPECIFIER = flmfProductText;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

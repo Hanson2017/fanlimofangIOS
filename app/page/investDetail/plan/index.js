@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
     },
     planTd1: {
         paddingRight:2,
-        width: 48,
+        width: 45,
         alignItems: 'center',
     },
     planTd2: {
