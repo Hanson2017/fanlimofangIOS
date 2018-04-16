@@ -19,6 +19,7 @@ export default class extends Component {
         };
     }
     componentDidMount() {
+        
         this.showHeadBar(0, this.props.data.length);         //从第0条开始，轮播5条数据
     }
     showHeadBar(index, count) {
@@ -28,7 +29,7 @@ export default class extends Component {
             duration: 600,                        //动画时间
             Easing: Easing.linear,
             delay: 4000                            //文字停留时间
-        }).start(() => {                          //每一个动画结束后的回调 
+        }).start(() => {                       //每一个动画结束后的回调 
             if (index >= count) {
                 index = 0;
                 this.state.translateY.setValue(0);
@@ -92,7 +93,6 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         backgroundColor: '#363636',
         justifyContent: 'center',
-        alignItems: 'center',
     },
     wrapper: {
         marginHorizontal: 0,

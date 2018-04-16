@@ -111,7 +111,6 @@ export default class HomePage extends Component {
                                 noticeList: dataSource.payuser,
                                 dateDiff: dateDiff
                             })
-
                         })
                 }
                 else {
