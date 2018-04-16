@@ -530,6 +530,7 @@ const styles = StyleSheet.create({
         color: '#6B6B6B',
     },
     textInput: {
+        padding:0,
         paddingLeft: 8,
         width:180,
         height: 22,
@@ -537,6 +538,15 @@ const styles = StyleSheet.create({
         color: '#6B6B6B',
         borderWidth:1,
         borderColor:'#ccc',
+        borderRadius:4,
+    },
+    ViewInput: {
+        paddingLeft: 8,
+        width:180,
+        height: 22,
+        borderWidth:1,
+        borderColor:'#ccc',
+        justifyContent:'center',
         borderRadius:4,
     },
     commentsFormFillPhones: {

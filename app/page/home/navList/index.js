@@ -39,7 +39,7 @@ export default class Group extends Component {
                                     style={[styles.listRow]}
                                     key={i}
                                 >
-                                    <Icon name={item.iconName} size={22} color={'#e62344'} />
+                                    <Icon name={item.iconName} size={22} color={'#E62344'} />
                                     <Text style={[styles.textStyle]}>{item.title}</Text>
                                 </TouchableOpacity>
                             )
@@ -57,7 +57,7 @@ export default class Group extends Component {
                         }}
                         style={[styles.listRow]}
                     >
-                        <Icon name={'homeNavZhanghu'} size={22} color={'#e62344'} />
+                        <Icon name={'homeNavZhanghu'} size={22} color={'#E62344'} />
                         <Text style={[styles.textStyle]}>个人中心</Text>
                     </TouchableOpacity>
                 </View>

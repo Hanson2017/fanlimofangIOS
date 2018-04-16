@@ -251,6 +251,7 @@ var styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     searchText: {
+        padding:0,
         marginLeft: 5,
         flex: 1,
         height: 20,

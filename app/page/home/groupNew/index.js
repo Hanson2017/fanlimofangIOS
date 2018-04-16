@@ -22,11 +22,11 @@ export default class GroupNew extends Component {
                                     </View>
                                     <View style={[Theme.flexDrow, { alignItems: 'center', }]}>
                                         <Text style={styles.ItemNewText}>出借{list.activity.invest + ''}获得</Text>
-                                        <Text style={[styles.ItemNewText, { color: 'red' }]}>{list.activity.rebate + ''}</Text>
+                                        <Text style={[styles.ItemNewText, { color: '#E62344' }]}>{list.activity.rebate + ''}</Text>
                                     </View>
                                     <View style={[Theme.flexDrow, Theme.mt5, { alignItems: 'center' }]}>
                                         <Text style={styles.ItemNewText}>相当于年化</Text>
-                                        <Text style={[styles.ItemNewText, { color: 'red' }]}>
+                                        <Text style={[styles.ItemNewText, { color: '#E62344' }]}>
                                             {
                                                 list.activity.atype == 1 || list.activity.atype == 4 ?
                                                     list.activity.rate + '%'

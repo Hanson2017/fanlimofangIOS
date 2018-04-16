@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
     },
     textInput: {
+        padding:0,
         paddingLeft: 10,
         height: 42,
         fontSize: 11,
