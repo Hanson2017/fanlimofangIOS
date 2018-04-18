@@ -35,7 +35,7 @@ export default class HomePage extends Component {
             return (
                 <View style={[styles.container]}>
                     <StatusBar
-                        backgroundColor="#363636"
+                         backgroundColor="#1d1d1d"
                         barStyle="light-content"
                     />
 

@@ -9,7 +9,7 @@ export default class NavBar extends React.Component {
         return (
             <View style={[styles.navBarContainer,Platform.OS=='android'?{paddingTop:12,height: 44}:null]}>
                 <StatusBar
-                    backgroundColor="#363636"
+                    backgroundColor="#1d1d1d"
                     barStyle="light-content"
                 />
                 <TouchableOpacity style={styles.backBtn} activeOpacity={0.8}
