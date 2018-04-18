@@ -7,7 +7,7 @@ export default class NavBar extends React.Component {
     render() {
         const { title, back, navigator, search } = this.props;
         return (
-            <View style={[styles.navBarContainer,Platform.OS=='android'?{paddingTop:12}:null]}>
+            <View style={[styles.navBarContainer,Platform.OS=='android'?{paddingTop:12,height: 44}:null]}>
                 <StatusBar
                     backgroundColor="#363636"
                     barStyle="light-content"

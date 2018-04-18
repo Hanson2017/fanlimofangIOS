@@ -99,7 +99,9 @@ const styles = StyleSheet.create({
         color: '#868686',
     },
     keywords: {
+        height:12,
         flexDirection: 'row',
+        alignItems: 'center',
     },
     keywordText: {
         fontSize: 11,

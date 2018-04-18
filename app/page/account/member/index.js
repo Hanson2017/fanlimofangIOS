@@ -45,23 +45,33 @@ export default class MePage extends Component {
     render() {
         var { navigator } = this.props;
         var time = Date.parse(new Date());
-        var lasttime = Date.parse(Util.formatDate(signState.r_regtime));
-        var day = parseInt((time - lasttime) / (1000 * 60 * 60 * 24));
+        var day=null;
+        if(signState.r_regtime){
+            var lasttime = Date.parse(Util.formatDate(signState.r_regtime));
+            day = parseInt((time - lasttime) / (1000 * 60 * 60 * 24));
+        }
+       
         return (
             <View style={styles.container}>
                 <NavBar title={''} search={'null'} navigator={navigator} />
                 <View style={styles.containerBd}>
                     <View style={styles.accountHeader}>
                         {
-                            signState.r_avatar !== null && signState.r_avatar !== '' ?
+                            signState.r_avatar && signState.r_avatar !== null && signState.r_avatar !== '' ?
                                 <Image source={{ uri: signState.r_avatar }} style={styles.portrait} />
                                 :
                                 <Image source={{ uri: Api.domainM + '/images/portrait.png' }} style={styles.portrait} />
                         }
                         <Text style={styles.username}>{signState.r_username}</Text>
-                        <View style={styles.userDate}>
-                            <Text style={styles.userDateText}>玩转魔方 {day} 天</Text>
-                        </View>
+                        {
+                            day !== null ?
+                            <View style={styles.userDate}>
+                                <Text style={styles.userDateText}>玩转魔方 {day} 天</Text>
+                            </View>
+                            :
+                            null
+                        }
+                        
                     </View>
                     <ScrollView>
                         <View style={styles.accountBar}>
