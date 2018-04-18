@@ -61,7 +61,6 @@ export default class Login extends Component {
         })
     }
 
-
 }
 
 const styles = StyleSheet.create({

@@ -39,7 +39,7 @@ export default class HomePage extends Component {
                         barStyle="light-content"
                     />
 
-                    <View style={styles.homeTop} ref={'homeTop'}>
+                    <View style={[styles.homeTop,Platform.OS=='android'?{paddingTop:12}:null]} ref={'homeTop'}>
                         <View style={styles.logoContainer}>
                             <Image source={{ uri: 'http://m.fanlimofang.com/images/logo.png' }} style={styles.logo} />
                         </View>

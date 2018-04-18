@@ -29,7 +29,7 @@ export default class SearchBtn extends React.Component {
         var ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
         return (
             <View style={[styles.container, Platform.OS == 'android' ? { marginTop: 0 } : null]}>
-                <View style={styles.searchWp}>
+                <View style={[styles.searchWp,Platform.OS=='android'?{paddingTop:12}:null]}>
                     <TouchableOpacity style={styles.backBtn} activeOpacity={0.8}
                         onPress={() => {
                             this.props.navigator.pop();

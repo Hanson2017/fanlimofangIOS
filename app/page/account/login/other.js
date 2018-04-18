@@ -107,7 +107,7 @@ export default class Login extends Component {
     goBackSuccee() {
         DeviceEventEmitter.emit('loginState', '登录好了')        
         this.props.navigator.replace({
-            component: Account
+            component: MainPage
         })
     }
 }

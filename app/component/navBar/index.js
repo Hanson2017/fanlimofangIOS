@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, TouchableOpacity, Text, StatusBar } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Text, StatusBar,Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/Icomoon';
 import Search from '../../page/search/index';
 
@@ -7,7 +7,7 @@ export default class NavBar extends React.Component {
     render() {
         const { title, back, navigator, search } = this.props;
         return (
-            <View style={styles.navBarContainer}>
+            <View style={[styles.navBarContainer,Platform.OS=='android'?{paddingTop:12}:null]}>
                 <StatusBar
                     backgroundColor="#363636"
                     barStyle="light-content"

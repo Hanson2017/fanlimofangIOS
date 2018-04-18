@@ -28,7 +28,7 @@ export default class SearchBtn extends React.Component {
         }
         return (
             <View style={[styles.container, Platform.OS == 'android' ? { marginTop: 0 } : null]}>
-                <View style={styles.searchWp}>
+                <View style={[styles.searchWp,Platform.OS=='android'?{paddingTop:12}:null]}>
                     <View style={styles.searchBtn} activeOpacity={0.8}>
                         <Icon name={'searchN'} size={11} color={'#999'} />
                         <TextInput style={styles.searchText}

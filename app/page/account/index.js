@@ -20,16 +20,4 @@ export default class Account extends Component {
             return <Member navigator={navigator} />;
         }
     }
-    componentDidMount() {
-        let that = this;
-
-        this.subscription = DeviceEventEmitter.addListener('loginState', (data) => {
-           that.setState({
-                ref: !that.state.ref, 
-           })         
-        })        
-    }
-    componentWillUnmount() {
-        this.subscription.remove();
-    }
 }
