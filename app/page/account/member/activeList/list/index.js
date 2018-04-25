@@ -145,12 +145,15 @@ class List extends Component {
                                     <Text style={[styles.labelConText, styles.font11]}>
                                         {
                                             plan.repaydayelse != null && plan.repaydayelse != '' ?
-                                                '当日返现（周末和节假日顺延）'
+                                                plan.repaydayelse
                                                 :
-                                                plan.repaydaytype == 0 ?
-                                                    '自' + Util.formatDate(comment.addtime) + '起' + plan.repayday + '个工作日内'
+                                                plan.repayday == 0 ?
+                                                    '当日返现（周末和节假日顺延）'
                                                     :
-                                                    '自' + Util.formatDate(comment.addtime) + '起' + plan.repayday + '个自然日内'
+                                                    plan.repaydaytype == 0 ?
+                                                        '自' + Util.formatDate(comment.addtime) + '起' + plan.repayday + '个工作日内'
+                                                        :
+                                                        '自' + Util.formatDate(comment.addtime) + '起' + plan.repayday + '个自然日内'
                                         }
                                     </Text>
                                 </View>
@@ -549,10 +552,10 @@ const styles = StyleSheet.create({
     loadMoreText: {
         color: '#999',
     },
-    null:{
-        padding:12,
-        fontSize:11,
-        color:'#999',
+    null: {
+        padding: 12,
+        fontSize: 11,
+        color: '#999',
     }
 })
 
