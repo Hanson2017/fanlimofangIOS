@@ -66,7 +66,7 @@ export default class MePage extends Component {
                         {
                             day !== null ?
                             <View style={styles.userDate}>
-                                <Text style={styles.userDateText}>玩转魔方 {day} 天</Text>
+                                <Text style={styles.userDateText}>玩转魔方 {day+''} 天</Text>
                             </View>
                             :
                             null
