@@ -124,9 +124,15 @@ export default class Plan extends Component {
 
                                                 <View style={{ flexDirection: 'row', }}>
                                                     <Text style={styles.text}>1、通过</Text>
-                                                    <TouchableOpacity onPress={Util.Linked.bind(this, this.state.siteUrl)}>
+                                                    {
+                                                        acinfo.activity.status == 1 ?
+                                                        <TouchableOpacity onPress={Util.Linked.bind(this, this.state.siteUrl)}>
+                                                            <Text style={[styles.text, Theme.red]}>直达链接</Text>
+                                                        </TouchableOpacity>
+                                                        :                                                       
                                                         <Text style={[styles.text, Theme.red]}>直达链接</Text>
-                                                    </TouchableOpacity>
+                                                    }
+                                                    
                                                     {
                                                         acinfo.activity.invitation_code != '' ?
                                                             <Text style={styles.text}>
