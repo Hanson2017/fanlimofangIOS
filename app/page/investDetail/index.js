@@ -80,7 +80,7 @@ export default class DetailPage extends Component {
                             }}>
                             <View onStartShouldSetResponderCapture={(e) => { dismissKeyboard(); }}>
                                 <Top data={dataSource.acinfo} />
-                                <Mianze />
+                                <Mianze isrepeat={dataSource.acinfo.activity.isrepeat} />
                                 <Plan data={dataSource} />
                                 <Service data={{ qqgroup: dataSource.qqgroup, qqgroup_num: dataSource.qqgroup_num, qqservice: dataSource.qqservice, qqgroup_url: dataSource.qqgroup_url }} />
                                 
