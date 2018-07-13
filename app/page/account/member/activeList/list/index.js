@@ -115,6 +115,22 @@ class List extends Component {
                         }
 
                     </View>
+                    {activity.isrepeat === 0 ?
+                        <View style={styles.double}>
+                            <View style={styles.listBdList}>
+                                <View style={styles.label}><Text style={[styles.labelText, styles.font11]}>保障期</Text></View>
+                                <View style={styles.labelCon}><Text style={[styles.labelConText, styles.font11]}>{plan.protectday}天</Text></View>
+                            </View>
+
+                            <View style={styles.listBdList}>
+                                <View style={styles.label}><Text style={[styles.labelText, styles.font11]}>赔付率</Text></View>
+                                <View style={styles.labelCon}><Text style={[styles.labelConText, styles.font11]}>{plan.invest > 0 ? (plan.protectamount / plan.invest * 100).toFixed(2) + '%' : null}({plan.protectamount + '元'})</Text></View>
+                            </View>
+
+                        </View>
+                        :
+                        null
+                    }
                     <View style={styles.double}>
                         {
                             comment.status !== 0 ?
@@ -414,6 +430,7 @@ export default class ActiveRecord extends Component {
                                 totalNum: responseData.totalNum,
                                 pageSize: responseData.pageSize,
                             })
+                            console.log(responseData)
                         })
                 }
                 else {
