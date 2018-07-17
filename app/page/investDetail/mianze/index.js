@@ -6,7 +6,7 @@ export default class Mianze extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isHidden: true,
+            isHidden: false,
         }
     }
     render() {
@@ -54,7 +54,7 @@ export default class Mianze extends Component {
                             }
                         </View>
                 }
-                <TouchableOpacity style={styles.openbtn} activeOpacity={1}
+                {/* <TouchableOpacity style={styles.openbtn} activeOpacity={1}
                     onPress={()=>{
                         this.setState({
                             isHidden:!this.state.isHidden
@@ -63,7 +63,7 @@ export default class Mianze extends Component {
                 >
                     <View style={[this.state.isHidden?styles.triangDown:styles.triangUp]}></View>
                     <Text style={styles.openbtnText}>{this.state.isHidden?'展开全文':'收起全文'}</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
             </View>
         )
