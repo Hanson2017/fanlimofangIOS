@@ -169,7 +169,7 @@ export default class DetailPage extends Component {
                         isHiddenMianze ?
                             null
                             :
-                            <MianzePop siteUrl={siteUrl} that={this} />
+                            <MianzePop siteUrl={siteUrl} that={this}  isrepeat={dataSource.acinfo.activity.isrepeat} />
                     }
 
                 </View >
