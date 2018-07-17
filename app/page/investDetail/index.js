@@ -20,6 +20,7 @@ import Calendar from '../../component/selectDate';
 import Title from '../../component/title';
 import CommentItem from './comments/item';
 import BottomBtn from '../../component/submit/bottom';
+import MianzePop from './mianze/pop';
 
 var dismissKeyboard = require('dismissKeyboard');
 
@@ -36,24 +37,25 @@ export default class DetailPage extends Component {
             siteUrl: null,
             selectList: [],
             contentHeight: 0,  //ScrollView滚动容器高度
-            moveH: 0 ,  //ScrollView滑动的距离,
+            moveH: 0,  //ScrollView滑动的距离,
             isFixed: false,
-            dateDiff:0
+            dateDiff: 0,
+            isHiddenMianze: true,
         }
     }
-    render(){
+    render() {
 
         if (this.state.loading) {
             return (
                 <View style={styles.container}>
-                    <NavBar navigator={this.props.navigator} uri={null} isFixed={this.state.isFixed} endtime={null}  dateDiff={this.state.dateDiff} />
+                    <NavBar navigator={this.props.navigator} uri={null} isFixed={this.state.isFixed} endtime={null} dateDiff={this.state.dateDiff} />
                     <Loading />
                 </View>
             )
         }
         else {
             const that = this;
-            const { dataSource, commentData, siteUrl, selectList,dateDiff } = this.state;
+            const { dataSource, commentData, siteUrl, selectList, dateDiff, isHiddenMianze } = this.state;
             const acinfo = dataSource.acinfo;
             const plans = dataSource.plans;
             const uri = Api.domain + acinfo.plat.platlogo;
@@ -61,7 +63,7 @@ export default class DetailPage extends Component {
 
             return (
                 <View style={styles.container}>
-                    <NavBar navigator={this.props.navigator} uri={uri} isFixed={this.state.isFixed} endtime={acinfo.activity.isend === 1 && acinfo.activity.status === 1 ?acinfo.activity.endtime:null}  dateDiff={dateDiff} />
+                    <NavBar navigator={this.props.navigator} uri={uri} isFixed={this.state.isFixed} endtime={acinfo.activity.isend === 1 && acinfo.activity.status === 1 ? acinfo.activity.endtime : null} dateDiff={dateDiff} />
                     <Select ref="select" options={selectList} />
                     <Calendar ref="Calendar" />
                     <View style={{ flex: 1 }}>
@@ -83,7 +85,7 @@ export default class DetailPage extends Component {
                                 <Mianze isrepeat={dataSource.acinfo.activity.isrepeat} />
                                 <Plan data={dataSource} />
                                 <Service data={{ qqgroup: dataSource.qqgroup, qqgroup_num: dataSource.qqgroup_num, qqservice: dataSource.qqservice, qqgroup_url: dataSource.qqgroup_url }} />
-                                
+
 
                                 {
                                     acinfo.activity.iscomment == 0 ?
@@ -150,15 +152,26 @@ export default class DetailPage extends Component {
                         </ScrollView>
                     </View>
                     <TouchableOpacity
-                        style={[styles.submitBtn,acinfo.activity.status==2?styles.submitBtnOver:null]}
+                        style={[styles.submitBtn, acinfo.activity.status == 2 ? styles.submitBtnOver : null]}
                         activeOpacity={0.7}
-                        onPress={()=>{Util.Linked(siteUrl)}}
+                        onPress={() => {
+                            this.setState({
+                                isHiddenMianze: false,
+                            })
+
+                        }}
                         disabled={acinfo.activity.status == 1 ? false : true}
                     >
                         <Text style={[styles.submitBtnText]}>{acinfo.activity.status == 1 ? '直达链接' : '已结束'}</Text>
                         <Text style={styles.submitBtnTT}>（网贷有风险，出借需谨慎）</Text>
                     </TouchableOpacity>
-                    
+                    {
+                        isHiddenMianze ?
+                            null
+                            :
+                            <MianzePop siteUrl={siteUrl} that={this} />
+                    }
+
                 </View >
             )
         }
@@ -169,8 +182,8 @@ export default class DetailPage extends Component {
     isShowCalendar() {
         this.refs.Calendar.show()
     }
-    _onScroll(e){
-    
+    _onScroll(e) {
+
         var offsetY = e.nativeEvent.contentOffset.y;
 
         if (offsetY > 0) {
@@ -224,7 +237,7 @@ export default class DetailPage extends Component {
                                 dataSource: responseData.data,
                                 siteUrl: acSiteUrl,
                                 selectList: selectList,
-                                dateDiff:dateDiff
+                                dateDiff: dateDiff
                             })
                         })
                 }
@@ -236,7 +249,7 @@ export default class DetailPage extends Component {
                 console.log('error:', error)
             })
     }
-    getCommentData () {
+    getCommentData() {
         let that = this;
         let memberid = 0;
         if (signState) {
@@ -305,7 +318,7 @@ const styles = StyleSheet.create({
         fontSize: 11,
     },
     submitBtn: {
-        position:'relative',
+        position: 'relative',
         height: 46,
         backgroundColor: Theme.color,
         alignItems: 'center',
@@ -319,11 +332,11 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#fff',
     },
-    submitBtnTT:{
-        paddingTop:4,
-        fontSize:10,
-        color:'#fff',
-        opacity:0.7
+    submitBtnTT: {
+        paddingTop: 4,
+        fontSize: 10,
+        color: '#fff',
+        opacity: 0.7
     },
 
 })

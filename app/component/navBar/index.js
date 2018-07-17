@@ -63,7 +63,7 @@ var styles = StyleSheet.create({
     backBtn: {
         paddingLeft: 12,
         width: 50,
-        height: 20,
+        height: 26,
         flexDirection: 'row',
         alignItems: 'center',
     },
@@ -72,7 +72,7 @@ var styles = StyleSheet.create({
         paddingLeft: 6,
         flexDirection: 'row',
         alignItems: 'center',
-        height: 20,
+        height: 26,
         borderRadius: 5,
         backgroundColor: '#fff',
     },
@@ -83,7 +83,7 @@ var styles = StyleSheet.create({
     },
     navBarTitle: {
         flex: 1,
-        height: 20,
+        height: 26,
         justifyContent: 'center',
         alignItems: 'center',
     },
