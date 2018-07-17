@@ -13,11 +13,11 @@ export default class Mianze extends Component {
         const { isrepeat } = this.props;
         return (
             <View style={[styles.container]}>
-                <Title title={'免责声明'} />
+                <Title title={'风险提示及免责声明'} />
                 {
                     isrepeat == 0 ?
                         <View style={styles.mainzeContainer}>
-                            <Text style={styles.text}>【风险提示及免责声明】</Text>
+                           
                             <Text style={styles.text}>1、返利魔方仅为信息提供平台，返利魔方不参与用户在任何网贷平台投资交易的过程，也不接受、不触碰、不吸纳任何用户的投资资金。</Text>
                             <Text style={styles.text}>2、返利魔方仅提供各网贷平台的活动信息，不构成任何对该有活动的网贷平台(以下简称“活动平台”）的安全性的评价或投资建议。任何活动平台都存在不同程度的投资风险，用户应自行、谨慎评估各活动平台的风险，自行决策是否投资，并自行承担全部风险。</Text>
                             {
