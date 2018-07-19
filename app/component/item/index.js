@@ -98,12 +98,7 @@ export default class Item extends Component {
                                 :
                                 null
                         }
-                        {
-                            activity.isprotect == 1 ?
-                                <View style={[styles.tags]}><Text style={[styles.tagsText]}>魔方保障</Text></View>
-                                :
-                                null
-                        }
+                       
                         {
                             <View style={[styles.tags]}>
                                 <Text style={[styles.tagsText]}>

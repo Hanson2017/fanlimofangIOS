@@ -36,12 +36,7 @@ export default class DetailTop extends Component {
                                 :
                                 null
                         }
-                        {
-                            activity.isprotect == 1 ?
-                                <View style={styles.tag}><Text style={styles.tagText}>魔方保障</Text></View>
-                                :
-                                null
-                        }
+                        
                         {
                             data.repayday == '当日返现' ?
                                 <View style={styles.tag}><Text style={styles.tagText}>当日返现</Text></View>
@@ -70,7 +65,7 @@ export default class DetailTop extends Component {
                     }
                 </View>
                 <View style={styles.reasonContainer}>
-                    <Text style={[styles.reasonText, styles.reasonTit]}>推荐理由：</Text>
+                    <Text style={[styles.reasonText, styles.reasonTit]}>上架理由：</Text>
                     <Text style={styles.reasonText}>{Util.delHtmlTag(activity.reasons)}</Text>
                 </View>
             </View>
