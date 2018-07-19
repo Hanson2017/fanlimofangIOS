@@ -94,7 +94,7 @@ export default class Item extends Component {
                         }
                         {
                             activity.ishighest == 1 ?
-                                <View style={[styles.tags]}><Text style={[styles.tagsText]}>全网最高</Text></View>
+                                <View style={[styles.tags]}><Text style={[styles.tagsText]}>全网领先</Text></View>
                                 :
                                 null
                         }
