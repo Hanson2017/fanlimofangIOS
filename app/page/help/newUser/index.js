@@ -56,7 +56,7 @@ export default class Help extends Component {
                         <Text style={styles.newUserText}>① 首次出借活动<Text style={styles.red}>必须从直达链接跳转到平台进行注册，必须！ </Text><Text style={styles.blod}>（多次出借不需要）</Text>；</Text>
                         <Text style={styles.newUserText}>② 严格按照页面里描述的出借规则进行出借，完事了记得在页面下方回帖，留下正确信息以及支付宝帐号，这样才能拿到返利。</Text>
                         <View style={[styles.imgContainer, styles.mt5, {}]}>
-                            <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/pp.png' }} style={{ height: (Theme.screenWidth - 30) * 1.473 }} />
+                            <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/pp.png?2018071901' }} style={{ height: (Theme.screenWidth - 30) * 1.473 }} />
                         </View>
                         <View style={styles.bdr}>
                             <Text style={styles.newUserText}>下面以桔子理财活动为例来讲解具体操作过程。</Text>
@@ -68,7 +68,7 @@ export default class Help extends Component {
                 <View style={[styles.mt10, styles.newUserBox]}>
                     <Text style={[styles.newUserText, styles.newUserh5]}>一、首先从返利魔方APP首页或项目列表页找到您感兴趣的活动，如下图所示：</Text>
                     <View style={[styles.imgContainer, styles.mt5]}>
-                        <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/p1.png' }} style={{ height: (Theme.screenWidth - 30) * 0.392 }} />
+                        <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/p1.png?2018071901' }} style={{ height: (Theme.screenWidth - 30) * 0.392 }} />
                     </View>
                     <Text style={styles.newUserText}>（在上图您可以看到该平台的风控评分和风险等级等信息。）</Text>
                 </View>
