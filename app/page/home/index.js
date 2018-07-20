@@ -55,7 +55,7 @@ export default class HomePage extends Component {
                     >
                         <MarqueeLabel data={noticeList} navigator={navigator} />
                         <View style={styles.banner}>
-                            <Image source={{ uri: 'http://m.fanlimofang.com/images/bannerNew.png?20180719' }} resizeMode={'cover'} style={styles.bannerImg} />
+                            <Image source={{ uri: 'http://m.fanlimofang.com/images/bannerNew.png?20180720' }} resizeMode={'cover'} style={styles.bannerImg} />
                         </View>
                         <NavList navigator={navigator} />
                         <GroupNew title={'近期热门活动'} lists={dataSourceHot} navigator={navigator} />
