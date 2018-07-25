@@ -8,65 +8,73 @@ export default class DetailTop extends Component {
         const activity = data.activity;
         const plat = data.plat;
         return (
-            <View style={[styles.deatilTopContainer]}>
-                <View style={styles.deatilTopHd}>
-                    <View>
-                        <Text style={styles.deatilTopHdText}>已参加</Text>
-                        <Text style={styles.number}>{data.commentnum + ''}人</Text>
-                    </View>
-                    <View style={styles.keywords}>
-                        <Text style={[styles.keywordText, styles.keywordTit]}>关键字:</Text>
-                        {
-                            Util.formatSymbol(activity.keywords).map((item, i) => {
-                                return <Text key={i} style={[styles.keywordText, styles.keyword]}>{item}</Text>;
-                            })
-                        }
-                    </View>
+            <View>
+                <View style={styles.tipNote}>
+                    <Text style={styles.tipNoteText}>【温馨提示】</Text>
+                    <Text style={[styles.tipNoteText,{marginTop:5,}]}>1、{plat.platname+''}活动，存在计划类项目拆成散标风险。</Text>
+                    <Text style={styles.tipNoteText}>如用户投资{plat.platname+''}1月标项目，可能在1个月之内由于平台政策变化，被强行拆成若干个期限不等的长期项目，最终导致的结果是回款周期加长，请用户知悉。</Text>
+                    <Text style={[styles.tipNoteText,{marginTop:10,}]}>2、{plat.platname+''}活动，已取消魔方保障。用户应自行、谨慎评估各活动平台的风险，自行决策是否投资，并自行承担全部风险。活动平台如出现任何风险（包括但不局限于平台提现困难/逾期/倒闭/跑路等导致无法拿回本金的情况），返利魔方均不承担任何责任。</Text>
                 </View>
-                <View style={styles.tagsContainer}>
-                    <View style={styles.tags}>
-                        <View style={[styles.tag, activity.isrepeat == 0 ? styles.tagFirst : styles.tagRepeat]}>
-                            <Text style={[styles.tagText, activity.isrepeat == 0 ? styles.tagFirstText : styles.tagRepeatText]}>
-                                {activity.isrepeat == 0 ? '首次出借' : '多次出借'}
-                            </Text>
+                <View style={[styles.deatilTopContainer]}>
+                    <View style={styles.deatilTopHd}>
+                        <View>
+                            <Text style={styles.deatilTopHdText}>已参加</Text>
+                            <Text style={styles.number}>{data.commentnum + ''}人</Text>
+                        </View>
+                        <View style={styles.keywords}>
+                            <Text style={[styles.keywordText, styles.keywordTit]}>关键字:</Text>
+                            {
+                                Util.formatSymbol(activity.keywords).map((item, i) => {
+                                    return <Text key={i} style={[styles.keywordText, styles.keyword]}>{item}</Text>;
+                                })
+                            }
+                        </View>
+                    </View>
+                    <View style={styles.tagsContainer}>
+                        <View style={styles.tags}>
+                            <View style={[styles.tag, activity.isrepeat == 0 ? styles.tagFirst : styles.tagRepeat]}>
+                                <Text style={[styles.tagText, activity.isrepeat == 0 ? styles.tagFirstText : styles.tagRepeatText]}>
+                                    {activity.isrepeat == 0 ? '首次出借' : '多次出借'}
+                                </Text>
+                            </View>
+                            {
+                                activity.ishighest == 1 ?
+                                    <View style={styles.tag}><Text style={styles.tagText}>全网领先</Text></View>
+                                    :
+                                    null
+                            }
+
+                            {
+                                data.repayday == '当日返现' ?
+                                    <View style={styles.tag}><Text style={styles.tagText}>当日返现</Text></View>
+                                    :
+                                    <View style={styles.tag}><Text style={styles.tagText}>{data.repayday.replace('个', '') + '返'}</Text></View>
+                            }
                         </View>
                         {
-                            activity.ishighest == 1 ?
-                                <View style={styles.tag}><Text style={styles.tagText}>全网领先</Text></View>
+                            activity.status == 1 ?
+                                activity.atype == 1 ?
+                                    <View style={styles.tags}>
+                                        <View style={styles.tag}><Text style={styles.tagText}>风控分:{plat.riskscore + ''}</Text></View>
+                                        {
+                                            plat.noshowrisk !== 1 ?
+                                                <View style={styles.tag}><Text style={styles.tagText}>风险等级:{Util.risklevel(plat.risklevel)}</Text></View>
+                                                :
+                                                null
+                                        }
+                                    </View>
+                                    :
+                                    <View style={styles.tags}>
+                                        <View style={styles.tag}><Text style={styles.tagText}>{Util.inType(activity.atype)}</Text></View>
+                                    </View>
                                 :
                                 null
                         }
-                        
-                        {
-                            data.repayday == '当日返现' ?
-                                <View style={styles.tag}><Text style={styles.tagText}>当日返现</Text></View>
-                                :
-                                <View style={styles.tag}><Text style={styles.tagText}>{data.repayday.replace('个', '') + '返'}</Text></View>
-                        }
                     </View>
-                    {
-                        activity.status == 1 ?
-                            activity.atype == 1 ?
-                                <View style={styles.tags}>
-                                    <View style={styles.tag}><Text style={styles.tagText}>风控分:{plat.riskscore + ''}</Text></View>
-                                    {
-                                        plat.noshowrisk !== 1 ?
-                                            <View style={styles.tag}><Text style={styles.tagText}>{Util.risklevel(plat.risklevel)}</Text></View>
-                                            :
-                                            null
-                                    }
-                                </View>
-                                :
-                                <View style={styles.tags}>
-                                    <View style={styles.tag}><Text style={styles.tagText}>{Util.inType(activity.atype)}</Text></View>
-                                </View>  
-                            :
-                            null
-                    }
-                </View>
-                <View style={styles.reasonContainer}>
-                    <Text style={[styles.reasonText, styles.reasonTit]}>上架理由：</Text>
-                    <Text style={styles.reasonText}>{Util.delHtmlTag(activity.reasons)}</Text>
+                    <View style={styles.reasonContainer}>
+                        <Text style={[styles.reasonText, styles.reasonTit]}>上架理由：</Text>
+                        <Text style={styles.reasonText}>{Util.delHtmlTag(activity.reasons)}</Text>
+                    </View>
                 </View>
             </View>
         )
@@ -74,7 +82,17 @@ export default class DetailTop extends Component {
 }
 
 const styles = StyleSheet.create({
+    tipNote:{
+        padding: 12,
+        backgroundColor: '#fff',
+    },
+    tipNoteText:{
+        fontSize:11,
+        color:'#E61C2C',
+        lineHeight:15,
+    },
     deatilTopContainer: {
+        marginTop:15,
         padding: 12,
         backgroundColor: '#fff',
     },
@@ -94,7 +112,7 @@ const styles = StyleSheet.create({
         color: '#868686',
     },
     keywords: {
-        height:12,
+        height: 12,
         flexDirection: 'row',
         alignItems: 'center',
     },

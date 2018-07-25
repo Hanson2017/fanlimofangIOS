@@ -81,7 +81,7 @@ export default class Item extends Component {
                                         <View style={[styles.tags]}><Text style={[styles.tagsText]}>风控分:{plat.riskscore + ''}</Text></View>
                                         {
                                             plat.noshowrisk !== 1 ?
-                                                <View style={[styles.tags]}><Text style={[styles.tagsText]}>{Util.risklevel(plat.risklevel)}</Text></View>
+                                                <View style={[styles.tags]}><Text style={[styles.tagsText]}>风险等级:{Util.risklevel(plat.risklevel)}</Text></View>
                                                 :
                                                 null
                                         }

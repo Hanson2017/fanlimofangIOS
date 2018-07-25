@@ -29,23 +29,23 @@ module.exports = {
         strs = str.replace('，', ',')
         return strs.split(',');
     },
-    countTime(val,dateDiff) {
+    countTime(val, dateDiff) {
 
         //获取当前时间  
         var date = new Date();
-        var now = date.getTime()+dateDiff;
+        var now = date.getTime() + dateDiff;
         //设置截止时间  
-                
+
         var endDate = new Date(parseInt(val.replace("/Date(", "").replace(")/", "")));
         var end = endDate.getTime();
 
         //时间差  
         var leftTime = end - now;
-    
+
         if (leftTime <= 0) {
             return '活动已结束';
         }
-    
+
         //定义变量 d,h,m,s保存倒计时的时间  
         var d, h, m, s;
         if (leftTime >= 0) {
@@ -55,32 +55,44 @@ module.exports = {
             s = Math.floor(leftTime / 1000 % 60);
         }
         //将倒计时赋值到div中  
-    
-        var mm=m < 10?'0'+m:m;
-        var ss=s < 10?'0'+s:s;
 
-        return h+':'+mm+':'+ss
-    
+        var mm = m < 10 ? '0' + m : m;
+        var ss = s < 10 ? '0' + s : s;
+
+        return h + ':' + mm + ':' + ss
+
     },
     risklevel(val) {
         // 风险等级
         let risklevel;
         switch (val) {
             case 1:
-                risklevel = '风险极低'
+                risklevel = 'AAA'
                 break;
 
             case 2:
-                risklevel = '风险偏低'
+                risklevel = 'AA'
                 break;
             case 3:
-                risklevel = '风险一般'
+                risklevel = 'A'
                 break;
             case 4:
-                risklevel = '风险偏高'
+                risklevel = 'BBB'
                 break;
             case 5:
-                risklevel = '风险极高'
+                risklevel = 'BB'
+                break;
+            case 6:
+                risklevel = 'B'
+                break;
+            case 7:
+                risklevel = 'CCC'
+                break;
+            case 8:
+                risklevel = 'CC'
+                break;
+            case 9:
+                risklevel = 'C'
                 break;
         }
         return risklevel;

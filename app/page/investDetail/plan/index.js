@@ -107,17 +107,8 @@ export default class Plan extends Component {
                                                         }
                                                     </Text>
                                                 </Text>
-                                                <Text style={styles.text}>
-                                                    赔付率：
-                                             {
-                                                        item.invest > 0 ?
-                                                            (item.protectamount / item.invest * 100).toFixed(2) + '%'
-                                                            :
-                                                            0
-                                                    }
-                                                    ({item.protectamount + ''}元)
-                                        </Text>
-                                                <Text style={styles.text}>保障时间：{item.protectday + ''}天（从出借当日起算）</Text>
+                                                
+                                                
                                             </View>
                                             <View style={styles.planLiuc}>
                                                 <View style={styles.planTit}><Text style={styles.planTitText}>出借流程</Text></View>

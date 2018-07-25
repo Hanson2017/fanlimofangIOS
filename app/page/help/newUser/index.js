@@ -56,7 +56,7 @@ export default class Help extends Component {
                         <Text style={styles.newUserText}>① 首次出借活动<Text style={styles.red}>必须从直达链接跳转到平台进行注册，必须！ </Text><Text style={styles.blod}>（多次出借不需要）</Text>；</Text>
                         <Text style={styles.newUserText}>② 严格按照页面里描述的出借规则进行出借，完事了记得在页面下方回帖，留下正确信息以及支付宝帐号，这样才能拿到返利。</Text>
                         <View style={[styles.imgContainer, styles.mt5, {}]}>
-                            <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/pp.png?2018071901' }} style={{ height: (Theme.screenWidth - 30) * 1.473 }} />
+                            <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/pp.png?20180725' }} style={{ height: (Theme.screenWidth - 30) * 1.473 }} />
                         </View>
                         <View style={styles.bdr}>
                             <Text style={styles.newUserText}>下面以桔子理财活动为例来讲解具体操作过程。</Text>
@@ -68,7 +68,7 @@ export default class Help extends Component {
                 <View style={[styles.mt10, styles.newUserBox]}>
                     <Text style={[styles.newUserText, styles.newUserh5]}>一、首先从返利魔方APP首页或项目列表页找到您感兴趣的活动，如下图所示：</Text>
                     <View style={[styles.imgContainer, styles.mt5]}>
-                        <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/p1.png?2018071901' }} style={{ height: (Theme.screenWidth - 30) * 0.392 }} />
+                        <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/p1.png?20180725' }} style={{ height: (Theme.screenWidth - 30) * 0.392 }} />
                     </View>
                     <Text style={styles.newUserText}>（在上图您可以看到该平台的风控评分和风险等级等信息。）</Text>
                 </View>
@@ -106,7 +106,7 @@ export default class Help extends Component {
                         <Text style={[styles.newUserText, styles.newUserh6]}>B、点击某个方案下面的“点击查看详情”按钮，可以很清楚得看到出借方案的信息。</Text>
                         <Text style={styles.newUserText}>如下图所示：</Text>
                         <View style={[styles.imgContainer, styles.mt5]}>
-                            <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/p2b.png' }} style={{ height: (Theme.screenWidth - 30) * 1.5453 }} />
+                            <Image resizeMode={'contain'} source={{ uri: Api.domainM + '/images/newser/p2b.png?20180725' }} style={{ height: (Theme.screenWidth - 30) * 1.5453 }} />
                         </View>
 
                         <TouchableOpacity style={styles.more} onPress={() => {
@@ -124,9 +124,8 @@ export default class Help extends Component {
                                 :
                                 <View style={[styles.mt10]}>
                                     <Text style={styles.newUserText}><Text style={styles.blod}>1代表</Text>  出借回报换算成年化收益率是多少</Text>
-                                    <Text style={styles.newUserText}><Text style={styles.blod}>2代表</Text>  假设平台发生意外导致拿不回本金，返利魔方对本金的赔付比例。（示例这里写的是0.30%，意思就是假设您参加方案一，出借10500，赔付给您本金的0.3%，也就是31.5元）。</Text>
-                                    <Text style={styles.newUserText}><Text style={styles.blod}>3代表</Text>  魔方赔付的保障期限，比如您2007年1月1日参加活动进行出借，假设保障期是35天，那么在2007年2月4日之前如果因网贷平台原因导致无法拿回本金，则魔方会对该笔出借进行赔付。赔付兑现时间为从返利魔方确认该平台无法兑付起，1个月内按照赔付率进行赔付。（该示例中：如果在2月4日之前网贷平台状态为正常，但用户自己未提现，则魔方不予赔付）。</Text>
-                                    <Text style={styles.newUserText}><Text style={styles.blod}>4代表</Text>  出借流程，这里是对出借过程做详细说明，请根据出借流程指引进行出借。
+                                  
+                                    <Text style={styles.newUserText}><Text style={styles.blod}>2代表</Text>  出借流程，这里是对出借过程做详细说明，请根据出借流程指引进行出借。
                                         （出借流程说明一般分为几部分内容，
                                         一是通过直达链接进入网站注册，请千万记住，其他渠道注册的无法获得返利哦；
                                         二是一些普通操作，比如实名认证，绑定银行卡之类的；
@@ -135,8 +134,8 @@ export default class Help extends Component {
                                         五是出借明细和收益明细是怎么样的；
                                         六是返利魔方的返现周期是怎么样的。）
                                         </Text>
-                                    <Text style={styles.newUserText}><Text style={styles.blod}>5代表</Text>  特别说明，这里是对该活动一些特别需要注意的地方进行描述，请仔细阅读。</Text>
-                                    <Text style={styles.newUserText}><Text style={styles.blod}>6代表</Text>  页面最下面是“直达链接”，需要点击“直达链接”到平台去注册才行哦。</Text>
+                                    <Text style={styles.newUserText}><Text style={styles.blod}>3代表</Text>  特别说明，这里是对该活动一些特别需要注意的地方进行描述，请仔细阅读。</Text>
+                                    <Text style={styles.newUserText}><Text style={styles.blod}>4代表</Text>  页面最下面是“直达链接”，需要点击“直达链接”到平台去注册才行哦。</Text>
                                 </View>
                         }
                     </View>
