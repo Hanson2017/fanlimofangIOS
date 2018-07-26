@@ -26,6 +26,8 @@ module.exports = {
     memberdelcomment:host+'memberdelcomment',//删除留言
     getUserinfo: host + 'GetUserinfo', //QQ,wechat 登录
     getInfoList: host + 'GetInfoList', //常用问答
+    getNotice:host + 'GetInfoList_nodetail', //公告
+    getNoticeDetail:host + 'GetInfoDetail', //公告详情
     searchJson:host+'Searchjson',//搜索简易列表
     searchActivity:host+'SearchActivity',//搜索详细列表
     getqqinfo: host + 'Getqqinfo' //单独获取QQ客服信息

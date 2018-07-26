@@ -10,6 +10,7 @@ import ChangePassword from './changepwd';
 import UserSet from './set';
 import ActiveRecord from './activeList';
 import Kefu from './kefu';
+import Notice from '../../notice';
 
 import MainPage from '../../../page/MainPage'
 
@@ -92,6 +93,10 @@ export default class MePage extends Component {
                             <List text={'快捷设置'} iconName={'quick'} iconSize={12} iconColor={'#999'}
                                 navigator={navigator}
                                 component={UserSet}
+                            />
+                             <List text={'魔方公告'} iconName={'activeRecord'} iconSize={11} iconColor={'#999'}
+                                navigator={navigator}
+                                component={Notice}
                             />
                         </View>
                         <View style={{ marginTop: 15, }}>
