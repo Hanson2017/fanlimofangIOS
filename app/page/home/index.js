@@ -59,9 +59,9 @@ export default class HomePage extends Component {
                         <View style={styles.banner}>
                             <Image source={{ uri: 'http://m.fanlimofang.com/images/bannerNew.png?20180720' }} resizeMode={'cover'} style={styles.bannerImg} />
                         </View>
-                        <NavList navigator={navigator} />
-                        <GroupNew title={'近期热门活动'} lists={dataSourceHot} navigator={navigator} />
-                        <GroupNew title={'最新上线活动'} lists={dataSourceNew} navigator={navigator} />
+                        {/* <NavList navigator={navigator} /> */}
+                        {/* <GroupNew title={'近期热门活动'} lists={dataSourceHot} navigator={navigator} /> */}
+                        {/* <GroupNew title={'最新上线活动'} lists={dataSourceNew} navigator={navigator} /> */}
                         <Group title={'首次出借活动'} dateDiff={dateDiff} lists={dataSourceFirst} navigator={navigator} type={'first'} />
                         <Group title={'多次出借活动'} dateDiff={dateDiff} lists={dataSourceRepeat} navigator={navigator} type={'repeat'} />
                         <Mianze />
