@@ -5,7 +5,9 @@ import Loading from '../../component/loading';
 import Theme from '../../util/theme';
 import NavBar from '../../component/navBar';
 import TabBar from '../../component/tabBar';
-import InvestList from '../investList/index'
+import InvestList from '../investList/index';
+
+
 
 export default class FirstPage extends Component {
     constructor(props) {
@@ -38,7 +40,6 @@ export default class FirstPage extends Component {
                         </View>
 
                     </ScrollableTabView>
-
                 </View>
             )
         }

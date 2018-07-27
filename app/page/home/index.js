@@ -8,6 +8,8 @@ import Search from './search';
 import NavList from './navList';
 import Group from './group';
 import GroupNew from './groupNew';
+import Mianze from '../mianze';
+
 
 export default class HomePage extends Component {
     constructor(props) {
@@ -62,6 +64,7 @@ export default class HomePage extends Component {
                         <GroupNew title={'最新上线活动'} lists={dataSourceNew} navigator={navigator} />
                         <Group title={'首次出借活动'} dateDiff={dateDiff} lists={dataSourceFirst} navigator={navigator} type={'first'} />
                         <Group title={'多次出借活动'} dateDiff={dateDiff} lists={dataSourceRepeat} navigator={navigator} type={'repeat'} />
+                        <Mianze />
                     </ScrollView>
 
                 </View>

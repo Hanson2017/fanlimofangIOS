@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 import Util from '../../../util/util';
 
 export default class DetailTop extends Component {
     render() {
-        const data = this.props.data;
+        const {data,that}=this.props;
         const activity = data.activity;
         const plat = data.plat;
         return (
             <View>
-                <View style={styles.tipNote}>               
+                <View style={styles.tipNote}>
                     <Text style={styles.tipNoteText}>【温馨提示】</Text>
-                    <Text style={[styles.tipNoteText,{marginTop:5,}]}>1、{plat.platname+''}活动，存在①计划类项目拆成散标风险； ②计划类项目因债转无人买进导致无法退出，从而回款周期加长的风险。</Text>
-                    <Text style={[styles.tipNoteText,{marginTop:5,}]}>例如：① 用户投资{plat.platname+''}1月标项目，可能在1个月之内由于平台政策变化，被强行拆成若干个期限不等的长期项目，最终导致的结果是回款周期加长。② 用户投资{plat.platname+''}1月标项目，到期后因债转无人买进导致无法退出，从而回款周期加长的风险。请用户知悉。</Text>
-                    <Text style={[styles.tipNoteText,{marginTop:10,}]}>2、{plat.platname+''}活动，已取消魔方保障。用户应自行、谨慎评估各活动平台的风险，自行决策是否投资，并自行承担全部风险。活动平台如出现任何风险（包括但不局限于平台提现困难/逾期/倒闭/跑路等导致无法拿回本金的情况），返利魔方均不承担任何责任。</Text>
+                    <Text style={[styles.tipNoteText, { marginTop: 5, }]}>1、{plat.platname + ''}活动，存在①计划类项目拆成散标风险； ②计划类项目因债转无人买进导致无法退出，从而回款周期加长的风险。</Text>
+                    <Text style={[styles.tipNoteText, { marginTop: 5, }]}>例如：① 用户投资{plat.platname + ''}1月标项目，可能在1个月之内由于平台政策变化，被强行拆成若干个期限不等的长期项目，最终导致的结果是回款周期加长。② 用户投资{plat.platname + ''}1月标项目，到期后因债转无人买进导致无法退出，从而回款周期加长的风险。请用户知悉。</Text>
+                    <Text style={[styles.tipNoteText, { marginTop: 10, }]}>2、{plat.platname + ''}活动，已取消魔方保障。用户应自行、谨慎评估各活动平台的风险，自行决策是否投资，并自行承担全部风险。活动平台如出现任何风险（包括但不局限于平台提现困难/逾期/倒闭/跑路等导致无法拿回本金的情况），返利魔方均不承担任何责任。</Text>
                 </View>
                 <View style={[styles.deatilTopContainer]}>
                     <View style={styles.deatilTopHd}>
@@ -58,7 +58,19 @@ export default class DetailTop extends Component {
                                         <View style={styles.tag}><Text style={styles.tagText}>风控分:{plat.riskscore + ''}</Text></View>
                                         {
                                             plat.noshowrisk !== 1 ?
-                                                <View style={styles.tag}><Text style={styles.tagText}>风险等级:{Util.risklevel(plat.risklevel)}</Text></View>
+                                                <View style={{flexDirection:'row',alignItems:'center',}}>
+                                                    <View style={styles.tag}><Text style={styles.tagText}>风险等级:{Util.risklevel(plat.risklevel)}</Text></View>
+                                                    <TouchableOpacity style={styles.prompt}
+                                                        onPress={() => {
+                                                            that.setState({
+                                                                isHiddenIntroduce: false,
+                                                            })
+                                                        }}
+                                                    >
+                                                        <Text style={styles.promptText}>?</Text>
+                                                    </TouchableOpacity>
+                                                </View>
+
                                                 :
                                                 null
                                         }
@@ -82,17 +94,17 @@ export default class DetailTop extends Component {
 }
 
 const styles = StyleSheet.create({
-    tipNote:{
+    tipNote: {
         padding: 12,
         backgroundColor: '#fff',
     },
-    tipNoteText:{
-        fontSize:11,
-        color:'#E61C2C',
-        lineHeight:15,
+    tipNoteText: {
+        fontSize: 11,
+        color: '#E61C2C',
+        lineHeight: 15,
     },
     deatilTopContainer: {
-        marginTop:15,
+        marginTop: 15,
         padding: 12,
         backgroundColor: '#fff',
     },
@@ -125,6 +137,7 @@ const styles = StyleSheet.create({
     },
     tags: {
         flexDirection: 'row',
+        alignItems:'center',
         marginBottom: 10,
     },
     tag: {
@@ -166,5 +179,21 @@ const styles = StyleSheet.create({
     },
     reasonTit: {
         paddingBottom: 5,
-    }
+    },
+    prompt:{
+        width:14,
+        height:14,
+        borderRadius:7,
+        backgroundColor:'#bbb',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow:'hidden',
+    },
+    promptText:{
+        color:'#fff',
+        fontSize:11,
+        fontWeight:'bold',
+        borderRadius:7,
+       
+    },
 })

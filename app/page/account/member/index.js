@@ -11,6 +11,7 @@ import UserSet from './set';
 import ActiveRecord from './activeList';
 import Kefu from './kefu';
 import Notice from '../../notice';
+import Mianze from '../../mianze';
 
 import MainPage from '../../../page/MainPage'
 
@@ -108,6 +109,7 @@ export default class MePage extends Component {
                         <TouchableOpacity style={[styles.accountBarList, Theme.mt15, { justifyContent: 'center' }]} activeOpacity={0.7} onPress={this.logout.bind(this)}>
                             <Text style={styles.accountBarListText}>退出登录</Text>
                         </TouchableOpacity>
+                        <Mianze />
                     </ScrollView>
                 </View>
                 <View style={styles.version}>

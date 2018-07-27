@@ -21,6 +21,7 @@ import Title from '../../component/title';
 import CommentItem from './comments/item';
 import BottomBtn from '../../component/submit/bottom';
 import MianzePop from './mianze/pop';
+import Introduce from './introduce';
 
 var dismissKeyboard = require('dismissKeyboard');
 
@@ -41,6 +42,7 @@ export default class DetailPage extends Component {
             isFixed: false,
             dateDiff: 0,
             isHiddenMianze: true,
+            isHiddenIntroduce: true,
         }
     }
     render() {
@@ -55,7 +57,7 @@ export default class DetailPage extends Component {
         }
         else {
             const that = this;
-            const { dataSource, commentData, siteUrl, selectList, dateDiff, isHiddenMianze } = this.state;
+            const { dataSource, commentData, siteUrl, selectList, dateDiff, isHiddenMianze, isHiddenIntroduce } = this.state;
             const acinfo = dataSource.acinfo;
             const plans = dataSource.plans;
             const uri = Api.domain + acinfo.plat.platlogo;
@@ -81,7 +83,7 @@ export default class DetailPage extends Component {
 
                             }}>
                             <View onStartShouldSetResponderCapture={(e) => { dismissKeyboard(); }}>
-                                <Top data={dataSource.acinfo} />
+                                <Top data={dataSource.acinfo} that={this} />
                                 <Mianze isrepeat={dataSource.acinfo.activity.isrepeat} />
                                 <Plan data={dataSource} />
                                 <Service data={{ qqgroup: dataSource.qqgroup, qqgroup_num: dataSource.qqgroup_num, qqservice: dataSource.qqservice, qqgroup_url: dataSource.qqgroup_url }} />
@@ -169,9 +171,14 @@ export default class DetailPage extends Component {
                         isHiddenMianze ?
                             null
                             :
-                            <MianzePop siteUrl={siteUrl} that={this}  isrepeat={dataSource.acinfo.activity.isrepeat} />
+                            <MianzePop siteUrl={siteUrl} that={this} isrepeat={dataSource.acinfo.activity.isrepeat} />
                     }
-
+                    {
+                        isHiddenIntroduce ?
+                            null
+                            :
+                            <Introduce that={this} />
+                    }
                 </View >
             )
         }

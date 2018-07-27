@@ -4,6 +4,7 @@ import Item from '../../component/item/index';
 import Api from '../../util/api';
 import Theme from '../../util/theme';
 import Loading from '../../component/loading';
+import Mianze from '../mianze'
 
 export default class ListPage extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export default class ListPage extends Component {
             pageCount: 1,
             totalNum: null,
             pageSize: null,
-            dateDiff:0
+            dateDiff: 0
         };
     }
     render() {
@@ -51,7 +52,7 @@ export default class ListPage extends Component {
     }
     renderRow(rowData, sectionID, rowID) {
 
-        return <Item  dateDiff={this.state.dateDiff} data={rowData} key={sectionID + rowID} navigator={this.props.navigator} backName={this.props.backName} />
+        return <Item dateDiff={this.state.dateDiff} data={rowData} key={sectionID + rowID} navigator={this.props.navigator} backName={this.props.backName} />
     }
     renderFooter() {
         if (this.state.isLoadMore) {
@@ -73,12 +74,17 @@ export default class ListPage extends Component {
             }
         }
         else {
-            return null;
+            if (this.props.type == 'first' || this.props.type == 'repeat') {
+                return (
+                    <Mianze />
+                );
+            }
+
         }
 
     }
-    _onScroll(e){
-        let that=this.props.that;
+    _onScroll(e) {
+        let that = this.props.that;
         var offsetY = e.nativeEvent.contentOffset.y;
 
         if (offsetY > 0) {
@@ -145,12 +151,12 @@ export default class ListPage extends Component {
                 dataSource2: [],
             })
         }
-        var url 
+        var url
 
-        if(this.props.tType && this.props.tType == 'listTag'){
+        if (this.props.tType && this.props.tType == 'listTag') {
             url = Api.listTag + '?type=' + this.props.type + '&page=' + this.page + '&pagesize=10';
         }
-        else{
+        else {
             url = Api.list + '?type=' + this.props.type + '&page=' + this.page + '&pagesize=10';
         }
 
@@ -181,7 +187,7 @@ export default class ListPage extends Component {
                                     pageCount: responseData.pageCount,
                                     totalNum: responseData.totalNum,
                                     pageSize: responseData.pageSize,
-                                    dateDiff:dateDiff
+                                    dateDiff: dateDiff
                                 })
                             })
                     }
