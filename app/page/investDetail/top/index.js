@@ -4,7 +4,7 @@ import Util from '../../../util/util';
 
 export default class DetailTop extends Component {
     render() {
-        const {data,that}=this.props;
+        const { data, that } = this.props;
         const activity = data.activity;
         const plat = data.plat;
         return (
@@ -21,14 +21,19 @@ export default class DetailTop extends Component {
                             <Text style={styles.deatilTopHdText}>已参加</Text>
                             <Text style={styles.number}>{data.commentnum + ''}人</Text>
                         </View>
-                        <View style={styles.keywords}>
-                            <Text style={[styles.keywordText, styles.keywordTit]}>关键字:</Text>
-                            {
-                                Util.formatSymbol(activity.keywords).map((item, i) => {
-                                    return <Text key={i} style={[styles.keywordText, styles.keyword]}>{item}</Text>;
-                                })
-                            }
-                        </View>
+                        {
+                            activity.keywords != '' && activity.keywords != null ?
+                                <View style={styles.keywords}>
+                                    <Text style={[styles.keywordText, styles.keywordTit]}>关键字:</Text>
+                                    {
+                                        Util.formatSymbol(activity.keywords).map((item, i) => {
+                                            return <Text key={i} style={[styles.keywordText, styles.keyword]}>{item}</Text>;
+                                        })
+                                    }
+                                </View>
+                                :
+                                null
+                        }
                     </View>
                     <View style={styles.tagsContainer}>
                         <View style={styles.tags}>
@@ -58,7 +63,7 @@ export default class DetailTop extends Component {
                                         <View style={styles.tag}><Text style={styles.tagText}>风控分:{plat.riskscore + ''}</Text></View>
                                         {
                                             plat.noshowrisk !== 1 ?
-                                                <View style={{flexDirection:'row',alignItems:'center',}}>
+                                                <View style={{ flexDirection: 'row', alignItems: 'center', }}>
                                                     <View style={styles.tag}><Text style={styles.tagText}>风险等级:{Util.risklevel(plat.risklevel)}</Text></View>
                                                     <TouchableOpacity style={styles.prompt}
                                                         onPress={() => {
@@ -137,7 +142,7 @@ const styles = StyleSheet.create({
     },
     tags: {
         flexDirection: 'row',
-        alignItems:'center',
+        alignItems: 'center',
         marginBottom: 10,
     },
     tag: {
@@ -180,20 +185,20 @@ const styles = StyleSheet.create({
     reasonTit: {
         paddingBottom: 5,
     },
-    prompt:{
-        width:14,
-        height:14,
-        borderRadius:7,
-        backgroundColor:'#bbb',
+    prompt: {
+        width: 14,
+        height: 14,
+        borderRadius: 7,
+        backgroundColor: '#bbb',
         alignItems: 'center',
         justifyContent: 'center',
-        overflow:'hidden',
+        overflow: 'hidden',
     },
-    promptText:{
-        color:'#fff',
-        fontSize:11,
-        fontWeight:'bold',
-        borderRadius:7,
-       
+    promptText: {
+        color: '#fff',
+        fontSize: 11,
+        fontWeight: 'bold',
+        borderRadius: 7,
+
     },
 })

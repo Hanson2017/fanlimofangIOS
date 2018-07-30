@@ -32,11 +32,14 @@ export default class Item extends Component {
                                 }
 
                                 {
-                                    Util.formatSymbol(activity.keywords).map((keyword, i) => {
-                                        return (
-                                            <View key={i} style={[styles.tags, styles.tagsHd]}><Text style={[styles.tagsText, styles.tagsTextHd]}>{keyword}</Text></View>
-                                        )
-                                    })
+                                    activity.keywords != '' && activity.keywords != null ?
+                                        Util.formatSymbol(activity.keywords).map((keyword, i) => {
+                                            return (
+                                                <View key={i} style={[styles.tags, styles.tagsHd]}><Text style={[styles.tagsText, styles.tagsTextHd]}>{keyword}</Text></View>
+                                            )
+                                        })
+                                        :
+                                        null
                                 }
                             </View>
                         </View>
@@ -44,7 +47,7 @@ export default class Item extends Component {
                             activity.isend === 1 && activity.status !== 2 ?
                                 <View style={styles.countdown}>
                                     <Text style={styles.countdownText}>即将结束</Text>
-                                    <Text style={styles.countdownDateText}>{Util.countTime(activity.endtime,dateDiff)}</Text>
+                                    <Text style={styles.countdownDateText}>{Util.countTime(activity.endtime, dateDiff)}</Text>
                                 </View>
                                 :
                                 null
@@ -98,7 +101,7 @@ export default class Item extends Component {
                                 :
                                 null
                         }
-                       
+
                         {
                             <View style={[styles.tags]}>
                                 <Text style={[styles.tagsText]}>
@@ -189,23 +192,23 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#f2f2f2',
     },
-    listHdLeft:{
-        flexDirection: 'row', 
+    listHdLeft: {
+        flexDirection: 'row',
     },
-    countdown:{
-        width:60,
-        height:23,
-        paddingLeft:8,
-        borderLeftWidth:1,
-        borderLeftColor:'#bcbcbc',
+    countdown: {
+        width: 60,
+        height: 23,
+        paddingLeft: 8,
+        borderLeftWidth: 1,
+        borderLeftColor: '#bcbcbc',
     },
-    countdownText:{
-        color:'#868686',
-        fontSize:11
+    countdownText: {
+        color: '#868686',
+        fontSize: 11
     },
-    countdownDateText:{
-        color:'#E61C2C',
-        fontSize:11
+    countdownDateText: {
+        color: '#E61C2C',
+        fontSize: 11
     },
     listHdTags: {
         flexDirection: 'row',
