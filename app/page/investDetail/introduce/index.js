@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
         color: '#fff',
     },
     btnCancel: {
-        backgroundColor: '#bbb',
+        backgroundColor: '#e61c2c',
     },
     
 })
