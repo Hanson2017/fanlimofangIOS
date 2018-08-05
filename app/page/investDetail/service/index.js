@@ -21,7 +21,7 @@ export default class DetailService extends Component {
                             })
                         }
                     </View>
-                    {
+                    {/* {
                         data.qqgroup != '' ?
                             <TouchableOpacity
                                 onPress={() => {
@@ -34,7 +34,7 @@ export default class DetailService extends Component {
                             </TouchableOpacity>
                             :
                             null
-                    }
+                    } */}
                 </View>
             </View>
         )

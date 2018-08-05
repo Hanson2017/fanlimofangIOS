@@ -45,7 +45,7 @@ export default class Group extends Component {
                                         })
                                     }
                                 </View>
-                                {
+                                {/* {
                                     dataSource.qqgroup != '' ?
                                         <TouchableOpacity
                                             onPress={() => {
@@ -58,7 +58,7 @@ export default class Group extends Component {
                                         </TouchableOpacity>
                                         :
                                         null
-                                }
+                                } */}
                             </View>
                         </View>
                 }
