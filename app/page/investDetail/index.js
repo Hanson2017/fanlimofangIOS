@@ -92,7 +92,7 @@ export default class DetailPage extends Component {
                                 {
                                     acinfo.activity.iscomment == 0 ?
                                         < View style={[styles.detailBox, Theme.mt15, { marginBottom: 10, }]}>
-                                            <Text style={styles.ddText}>本活动仅做优惠信息推送，无需回复投资信息。</Text>
+                                            <Text style={styles.ddText}>本活动仅做优惠信息推送，无需回复出借信息。</Text>
                                         </View>
                                         :
                                         <View>
