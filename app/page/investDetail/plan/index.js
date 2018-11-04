@@ -14,6 +14,7 @@ export default class Plan extends Component {
         };
     }
     componentWillMount() {
+        
         const activity = this.props.data.acinfo.activity
         const siteUrls = activity.siteurl.split(',')
         const index = Math.floor((Math.random() * siteUrls.length));
@@ -31,6 +32,7 @@ export default class Plan extends Component {
         })
     }
     render() {
+        const that=this.props.that;
         const data = this.props.data;
         const plans = data.plans;
         const acinfo = data.acinfo;
@@ -117,7 +119,12 @@ export default class Plan extends Component {
                                                     <Text style={styles.text}>1、通过</Text>
                                                     {
                                                         acinfo.activity.status == 1 ?
-                                                        <TouchableOpacity onPress={Util.Linked.bind(this, this.state.siteUrl)}>
+                                                        <TouchableOpacity onPress={() => {
+                                                            that.setState({
+                                                                isHiddenMianze: false,
+                                                            })
+                                
+                                                        }}>
                                                             <Text style={[styles.text, Theme.red]}>直达链接</Text>
                                                         </TouchableOpacity>
                                                         :                                                       
