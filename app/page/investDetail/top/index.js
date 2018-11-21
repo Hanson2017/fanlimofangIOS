@@ -39,7 +39,7 @@ export default class DetailTop extends Component {
                             </View>
                             {
                                 activity.ishighest == 1 ?
-                                    <View style={styles.tag}><Text style={styles.tagText}>全网领先</Text></View>
+                                    <View style={styles.tag}><Text style={styles.tagText}>全网较高</Text></View>
                                     :
                                     null
                             }
