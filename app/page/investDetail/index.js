@@ -86,7 +86,7 @@ export default class DetailPage extends Component {
                                 <Top data={dataSource.acinfo} that={this} />
                                 <Mianze isrepeat={dataSource.acinfo.activity.isrepeat} />
                                 <Plan data={dataSource} that={this} />
-                                <Service data={{ qqgroup: dataSource.qqgroup, qqgroup_num: dataSource.qqgroup_num, qqservice: dataSource.qqservice, qqgroup_url: dataSource.qqgroup_url }} />
+                                <Service data={{ qqgroup: dataSource.qqgroup, qqgroup_num: dataSource.qqgroup_num, qqservice: dataSource.qqservice, qqgroup_key: dataSource.qqgroup_key }} />
 
 
                                 {
